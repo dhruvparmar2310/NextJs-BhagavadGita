@@ -21,7 +21,7 @@ function Header () {
                                 <Link href='/' className={ysabeau.className}>Home</Link>
                             </li>
                             <li className={`${styles.drop_down}`}>
-                                <Link href={`#about-us`} className={ysabeau.className}>About <i class="ri-arrow-down-s-line"></i></Link>
+                                <Link href={`#about-us`} className={ysabeau.className}>About <i className="ri-arrow-down-s-line"></i></Link>
                                 <ul>
                                     <li>
                                         <Link href={'/about'} className={ysabeau.className}>Book</Link>
@@ -39,7 +39,7 @@ function Header () {
                                         <Link href={''} className={ysabeau.className}>Quotes</Link>
                                     </li>
                                     <li className={`${styles.drop_down}`}>
-                                        <Link href={'/about/adhyay'}>Adhyay <i class="ri-arrow-right-s-line"></i></Link>
+                                        <Link href={'/about/adhyay'}>Adhyay <i className="ri-arrow-right-s-line"></i></Link>
                                         <ul>
                                             <li>
                                                 <Link href="/about/adhyay/1">Adhyay 1</Link>
