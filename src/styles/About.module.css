@@ -1,0 +1,55 @@
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about_us, .about_us .content {
+    position: relative;
+}
+
+  .about_us .content p {
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 0.15mm;
+  }
+
+  .description{
+    margin-top: 30vh;
+  }
+
+  .description span {
+    font-weight: 500 !important;
+    color: var(--theme);
+  }
+
+  .slokh:hover {
+    color: var(--theme);
+    cursor: pointer;
+  }
+  
+  .description h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+    letter-spacing: 0.1mm;
+    text-transform: uppercase;
+  }
+  
+.card {
+    margin: 0 auto;
+}
+
+/* ISKCON */
+.iskcon p {
+  font-size: 20px;
+  font-style: italic;
+  text-align: justify;
+  word-spacing: 5px;
+}
+
+.faq_header {
+  font-size: 25px;
+}
+
+.accordion-header .accordion-button {
+  padding: 0px !important;
+}

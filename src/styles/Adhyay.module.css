@@ -1,0 +1,235 @@
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.adhyay {
+    position: relative;
+}
+
+.adhyay .content {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.adhyay .content h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .adhyay .content h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+  }
+  
+  .adhyay .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .adhyay .content ul li {
+    padding: 10px 0 0 28px;
+    position: relative;
+  }
+  
+  .adhyay .content ul i {
+    left: 0;
+    top: 7px;
+    position: absolute;
+    font-size: 20px;
+    color: var(--theme);
+  }
+
+  .adhyay .content p {
+    color: #000;
+    font-size: 18px;
+    text-align: justify;
+    font-style: italic;
+    word-spacing: 2px;
+    font-weight: 600;
+    letter-spacing: 0.2mm;
+  }
+  
+  .adhyay .content .info p:last-child {
+    margin-bottom: 0;
+    color: #555;
+  }
+  
+  .adhyay .content .book_page{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5) 0 20px 100px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    transition: 1s;
+    margin-bottom: 50px;
+  }
+  
+  .description{
+    margin-top: 30vh;
+  }
+
+  .slokh:hover {
+    color: var(--theme);
+    cursor: pointer;
+  }
+  
+  .description h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .description h3 {
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 24px;
+  }
+  
+  .description ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .description ul li {
+    padding: 10px 0 0 28px;
+    position: relative;
+    margin-left: 25px;
+  }
+  
+  .description ul i {
+    left: 0;
+    top: 7px;
+    position: absolute;
+    font-size: 20px;
+    color: var(--theme);
+  }
+
+  .adhyay table tr {
+    transition: 0.1s ease-in-out;
+  }
+
+  .adhyay table tr:hover {
+    content: '';
+    background-color: var(--hover);
+    box-shadow: 0 0 10px rgba(94, 94, 94, 0.77);
+    cursor: zoom-in;
+    border: none;
+    transform: scale(1.02);
+  }
+
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq .faq_list {
+  padding: 0 100px;
+}
+
+.faq .faq_list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq_list li + li {
+  margin-top: 15px;
+}
+
+.faq .faq_list li:hover {
+  box-shadow: 0 0 20px #999;
+}
+
+.faq .faq_list li {
+  padding: 20px;
+  background: var(--hover);
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid var(--theme);
+  box-shadow: 0 0 10px #999;
+  transition: 0.3s ease-in-out;
+}
+
+.faq .faq_list i{
+  color: #1bbd36;
+}
+
+.faq .faq_list a {
+  display: block;
+  position: relative;
+  font-family: cursive;
+  font-size: 16px;
+  line-height: 2px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 30px;
+  color: #fe0000;
+  text-decoration: none;
+}
+
+.faq .faq_list .icon_help {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  left: 20px;
+  color: lightgray;
+}
+
+.faq .faq_list .icon_show, .faq .faq_list .icon_close {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.faq .faq_list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+  font-family: cursive, sans-serif;
+  font-weight: 500;
+  color: #555;
+}
+
+.faq .faq_list .icon_show {
+  display: none;
+}
+
+.faq .faq_list h3{
+  margin-top: 50px;
+  color: #ffffffc9;
+}
+
+.faq .faq_list a.collapsed {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.faq .faq_list a.collapsed:hover {
+  color: #fe5b00;
+}
+
+.faq .faq_list a.collapsed .icon_show {
+  display: inline-block;
+}
+
+.faq .faq_list a.collapsed .icon_close {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .faq .faq_list {
+    padding: 0;
+  }
+}
