@@ -1,12 +1,21 @@
 import React from 'react'
 import styles from '../../styles/About.module.css'
 import { Ysabeau } from 'next/font/google'
+import Head from 'next/head'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
 function About() {
   return (
     <>
+      <Head>
+        <title>About | Bhagavad Gita</title>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='keywords' content='Bhagavad Gita, BhagavadGita, bhagavad gita, BhagavadGita by Dhruv Parmar, Bhagavad Gita by Dhruv Parmar' />
+        <meta name="description" content="The Srimad Bhagavad Gita is the most sacred and popular book of Hindus. According to the scriptures, the Gita is the supreme book in all the books. The bhagavad gita book contains 700-verses which comes in the Mahabharata (the Indian epic). Gita means the song in Sanskrit and Srimad Bhagavad means the supreme lord. So the Srimad Bhagavad Gita means  ‘the song of the god’." />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <section id="about-us" className={`${styles.about_us}`} style={{ height: 'auto', marginTop: '60px' }}>
           <div className="container" data-aos="fade-up">
 

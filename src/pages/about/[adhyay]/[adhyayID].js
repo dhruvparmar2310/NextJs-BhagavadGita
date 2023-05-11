@@ -4,17 +4,15 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import styles from '../../../styles/Adhyay.module.css'
-import { Lobster } from 'next/font/google'
+import { Ysabeau } from 'next/font/google'
 import main from '../../../../public/assets/adhyay/ch-1.jpg'
+import { Accordion, Card } from 'react-bootstrap'
 
-const lobster = Lobster({
-    subsets: ['latin'],
-    weight: '400',
-    style: 'normal'
-})
+const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
 function AdhyayID() {
     const [data, setData] = useState([])
+    const [id, setId] = useState('')
     const router = useRouter()
     const {adhyayID} = router.query
 
@@ -46,7 +44,7 @@ function AdhyayID() {
         </section>
 
         <section id="about-us" className={`${styles.adhyay}`}>
-            <div className="" data-aos="fade-up">
+            <div className="container" data-aos="fade-up">
 
                 <div className={`row ${styles.content}`}>
                     <div className="col-lg-4 text-center" data-aos="fade-right">
@@ -58,7 +56,7 @@ function AdhyayID() {
                             alt='bhagavad gita'
                         />
                     </div>
-                    <div className={`col-lg-8 ${lobster.className}`} data-aos="fade-left">
+                    <div className={`col-lg-8 ${ysabeau.className}`} data-aos="fade-left">
                       <p>
                         The Bhagavad Gita, or the song of God, was revealed by Lord Shree Krishna to Arjun on the threshold of the epic war of Mahabharata. A decisive battle between two sets of cousins, the Kauravas and the Pandavas, was just about to commence on the battlefield of Kurukshetra. A detailed account of the reasons that led to such a colossal war; is given under Introduction-The Setting of the Bhagavad Gita.
                       </p>
@@ -73,32 +71,30 @@ function AdhyayID() {
             </div>
         </section>
 
-        <section className={styles.faq}>
-          <div className={styles.faq_list}>
-            <ul>
-                {data?.content?.map((item, index) => {
-                  return (
-                    <React.Fragment key={item?.shlokID}>
-                      <li data-aos="fade-up">
-                        <Link data-bs-toggle="collapse" className="collapse" href="" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          {item?.shlok}<i className={`bx bx-chevron-down ${styles.icon_show}`}></i><i className={`bx bx-chevron-up ${styles.icon_close}`}></i>
-                        </Link>
-                        <div className="collapse show" data-parent="faq-list" id="collapseExample">
-                          <h3 className={lobster.className}>Translation in Hindi :</h3>
-                          <p style={{ textAlign: 'justify', fontWeight: '500', wordSpacing: '2px' }}>
-                            {item?.translation?.hi?.data}
-                          </p>
-                          <h3 className={lobster.className}>Translation in English :</h3>
-                          <p style={{ textAlign: 'justify', fontWeight: '600', wordSpacing: '2px' }}>
-                            {item?.translation?.en?.data}
-                          </p>
-                        </div>
-                      </li>
-                    </React.Fragment>
-                  )
-                })}
-            </ul>
+        <section id="about-us" className={`${styles.faq}`}>
+          <div className="container" data-aos="fade-up">
+
+            <div className={``}>
+              {data?.content?.map((item) => {
+                return (
+                  <React.Fragment key={item?.shlokID}>
+                    <Accordion defaultActiveKey={data?.content[0]} flush>
+                      <Accordion.Item eventKey={item?.shlokID}>
+                        <Accordion.Header>
+                          {item?.shlok}
+                        </Accordion.Header>
+                        <Accordion.Body style={{ border: '1px solid black !important' }} className={styles.accordion_body}>
+                          <span>{item?.translation?.hi?.data}</span>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    </Accordion>
+                  </React.Fragment>
+                )
+              })}
+            </div>
+          
           </div>
+
         </section>
     </>
   )
