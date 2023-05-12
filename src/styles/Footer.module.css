@@ -18,21 +18,23 @@
   }
   
   .footer .footer_top .footer_contact h3 a {
-    font-size: 22px;
+    font-size: 26px;
     margin: 0 0 10px 0;
     padding: 2px 0 2px 0;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
-    color: #fe5b00;
+    color: var(--theme);
+    text-decoration: none;
   }
   
   .footer .footer_top .footer_contact strong a{
     color: gray;
+    text-decoration: none;
   }
   
   .footer .footer_top .footer_contact strong a:hover{
-    color: #fe5b00; 
+    color: var(--theme); 
   }
   
   .footer .footer_top .footer_contact h3 a span{
@@ -43,7 +45,6 @@
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Roboto", sans-serif;
     color: rgba(255, 255, 255, 0.7);
   }
   
@@ -57,6 +58,10 @@
   
   .footer .footer_top .footer_links {
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .footer .footer_top .footer_links ul {
@@ -67,7 +72,7 @@
   
   .footer .footer_top .footer_links ul i {
     padding-right: 2px;
-    color: #1ed33c;
+    color: var(--theme);
     font-size: 18px;
     line-height: 1;
   }
@@ -87,6 +92,7 @@
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
+    text-decoration: none;
   }
   
   .footer .footer_top .footer_links ul a:hover {
@@ -107,66 +113,32 @@
     padding-bottom: 12px;
   }
   
-  .footer .footer_newsletter form {
-    margin-top: 30px;
-    background: #fff;
-    padding: 6px 10px;
-    position: relative;
-    border-radius: 4px 0 0 4px;
-    text-align: left;
-  }
-  
-  .footer .footer_newsletter form input[type="email"] {
-    border: 0;
-    padding: 4px 8px;
-    width: calc(100% - 100px);
-  }
-  
-  .footer .footer_newsletter form input[type="submit"] {
-    position: absolute;
-    top: 0;
-    right: -4px;
-    bottom: 0;
-    border: 0;
-    background: none;
-    font-size: 16px;
-    padding: 0 20px;
-    background: #1bbd36;
-    color: #fff;
-    transition: 0.3s;
-    border-radius: 0 4px 4px 0;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer .footer_newsletter form input[type="submit"]:hover {
-    background: #2ae149;
-  }
-  
   .footer .credits a {
     padding-top: 5px;
     font-size: 13px;
-    color: #1bbd36;
+    text-decoration: none;
+    color: var(--theme);
     font-weight: 600;
   }
   
   .footer .credits a:hover{
-    color: #10d430;
+    color: var(--hover);
     transition: 0.3s;
   }
   
   .footer .social_links a {
-    font-size: 18px;
+    font-size: 22px;
     display: inline-block;
     background: rgba(255, 255, 255, 0.08);
     color: #fff;
     line-height: 1;
     padding: 8px 0;
-    margin-right: 4px;
+    margin-right: 10px;
     border-radius: 4px;
     text-align: center;
     width: 36px;
-    height: 36px;
     transition: 0.3s;
+    text-decoration: none;
   }
   
   .footer .social_links a:hover {

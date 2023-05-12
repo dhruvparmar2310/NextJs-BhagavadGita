@@ -54,7 +54,7 @@ function Header () {
                             <li>
                                 <Link href={'/bhajan'} className={ysabeau.className}>Bhajan</Link>
                             </li>
-                            <li><Link href="contact.html" className={ysabeau.className}>Contact</Link></li>
+                            <li><Link href={'/contact'} className={ysabeau.className}>Contact</Link></li>
                         </ul>
                     </nav>
                 </div>

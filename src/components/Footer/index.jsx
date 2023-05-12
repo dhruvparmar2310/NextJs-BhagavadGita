@@ -1,42 +1,57 @@
 import React from 'react'
 import styles from '../../styles/Footer.module.css'
 import Link from 'next/link'
+import { Ysabeau } from 'next/font/google' 
+
+const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
 function Footer () {
   return (
     <>
-        <footer id="footer" className={`${styles.footer}`}>
+        <footer id="footer" className={`${styles.footer} ${ysabeau.className}`}>
 
             <div className={`${styles.footer_top}`}>
                 <div className="container">
                     <div className="row">
 
-                        <div className={`col-lg-6 col-md-6 ${styles.footer_contact}`}>
+                        <div className={`col-lg-3 col-md-6 ${styles.footer_contact}`} style={{ width: '20rem' }}>
                             <h3>
-                                <Link href="/">Bhagavad <span>Gita</span></Link>
+                                <Link href="/" className={ysabeau.className}>Bhagavad <span>Gita</span></Link>
                             </h3>
-                                <h4>Get in touch :</h4>
-                            <p>The Song of God<br/><br/>
+                            <h4 className={ysabeau.className} style={{ padding: '0', margin: '0' }}>Get in touch :</h4>
+                            <p className={ysabeau.className} style={{ fontSize: '16px' }}>The Song of God<br/><br/>
                                 <strong>Phone:<Link href="tel:9586627577"> +91 9586-627-577</Link></strong><br/>
-                                <strong>Email:<Link href="mailto:dpparmar808@gmail.com"> dpparmar808@gmail.com</Link></strong><br/>
+                                <strong>Email:<Link href="mailto:dhanparmar23@gmail.com"> dhanparmar23@gmail.com</Link></strong><br/>
                             </p>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
-                            <h4>Useful Links</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="index.html">Home</Link></li>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="#about-us">About us</Link></li>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="services.html">Bhajan</Link></li>
+                            <h4 className={ysabeau.className}>Useful Links</h4>
+                            <ul className={ysabeau.className}>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
-                            <h4>Reading</h4>
+                            <h4 className={ysabeau.className}>Useful Links</h4>
+                            <ul className={ysabeau.className}>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
+                            </ul>
+                        </div>
+
+                        <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
+                            <h4 className={ysabeau.className}>Reading</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="about.html">Adhyay</Link></li>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="chapter-1.html">Adhyay 1</Link></li>
-                                <li><i className="bx bx-chevron-right"></i> <Link href="chapter-2.html">Adhyay 2</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about">Book</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay">Adhyay</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 1</Link></li>
+                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 2</Link></li>
                             </ul>
                         </div>
 
@@ -44,19 +59,20 @@ function Footer () {
                 </div>
             </div>
 
-            <div className="container d-md-flex py-4">
+            <div className="container row" style={{ display: 'flex !important', alignItems: 'center', justifyContent: 'center', alignContent: 'center', padding: '20px', margin: '0 auto' }}>
 
-                <div className="mr-md-auto text-center text-md-left">
-                    <div className={`$styles.copyright}`}>
-                        &copy; Copyright <strong style={{ color: '#fe5b00' }}>Bhagavad <span style={{ color: '#ddd' }}>Gita</span></strong>. All Rights Reserved
+                <div className="col-lg-6 p-0">
+                    <div className={`${styles.copyright}`}>
+                        Copyright &copy; <span style={{ fontSize: '18px' }}>2023</span>, <strong style={{ color: 'var(--theme)' }}>Bhagavad <span style={{ color: '#ddd' }}>Gita</span></strong>. All Rights Reserved
                     </div>
                     <div className={styles.credits}>
                         Designed by <Link href="https://dhruvparmar2310.github.io/dhruvparmar/" target="_blank">Dhruv Parmar</Link>
                     </div>
                 </div>
-                <div className="social-links text-center text-md-right pt-3 pt-md-0">
-                    <Link href="https://www.facebook.com/dhruv.parmar.73550794" target="_blank" className="facebook"><i className="bx bxl-facebook"></i></Link>
-                    <Link href="https://www.instagram.com/dhr4290/" target="_blank" className="instagram"><i className="bx bxl-instagram"></i></Link>
+                <div className={`col-lg-6 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
+                    <Link href="https://github.com/dhruvparmar2310" target="_blank" className={styles.facebook}><i class="ri-github-fill"></i></Link>
+                    <Link href="https://www.facebook.com/dhruv.parmar.73550794" target="_blank" className={styles.facebook}><i className="ri-facebook-fill"></i></Link>
+                    <Link href="https://www.instagram.com/dhan.parmar23/" target="_blank" className={styles.instagram}><i className="ri-instagram-line"></i></Link>
                 </div>
             </div>
         </footer> 
