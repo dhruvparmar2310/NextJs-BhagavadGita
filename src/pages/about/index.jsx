@@ -9,7 +9,7 @@ function About() {
   return (
     <>
       <Head>
-        <title>About | Bhagavad Gita</title>
+        <title>About Us | Bhagavad Gita</title>
         <meta charset="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='keywords' content='Bhagavad Gita, BhagavadGita, bhagavad gita, BhagavadGita by Dhruv Parmar, Bhagavad Gita by Dhruv Parmar' />

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Footer.module.css'
 import Link from 'next/link'
 import { Ysabeau } from 'next/font/google' 
+import Head from 'next/head'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
