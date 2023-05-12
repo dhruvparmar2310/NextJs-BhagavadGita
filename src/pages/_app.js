@@ -5,16 +5,20 @@ import Header from '@/components/Header'
 import 'remixicon/fonts/remixicon.css'
 import 'aos/dist/aos'
 import Footer from '@/components/Footer'
+import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter()
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
+
+  console.log('router.route :>> ', router.route);
   return (
     <>
       <Header />
         <Component {...pageProps} />
-      <Footer />
+      {router?.route === '/bhajan' ? <footer style={{ display: 'none'}}></footer> : <Footer />}
     </>
   )
 }

@@ -1,0 +1,92 @@
+.bhajan {
+    /* background-image: linear-gradient(to bottom right, rgb(209, 0, 0), rgb(0, 42, 255)); */
+    /* background-image: url('/assets/wallpaper/5.jpg'); */
+    /* background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; */
+}
+
+.myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.bhajan .content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .bhajan .content {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    height: 60vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+  .bhajan .content p {
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 0.15mm;
+  }
+
+  .musicList {
+    height: 95%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 10px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* background-color: rgba(255, 255, 255, 0.525);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+  }
+
+  .musicList h1 {
+    background-color: rgba(255, 255, 255, 0.218);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    font-size: 26px;
+    padding: 10px;
+  }
+
+  .musicList table {
+    height: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .musicList table tbody {
+    overflow-y: scroll !important;
+  }
+
+  .musicPlayer {
+    background-color: rgba(255, 255, 255, 0.218);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 10px;
+    padding: 0px;
+  }
+
+  .musicPlayer img {
+    text-align: center;
+    font-size: 26px;
+    padding: 0px;
+    
+  }
