@@ -217,7 +217,7 @@
 
 .services .icon_box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
+  /* padding: 70px 20px 80px 20px; */
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
@@ -251,9 +251,8 @@
 }
 
 .services .icon_box h4 {
-  margin-top: 50px;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .services .icon_box h4 a {
@@ -265,7 +264,7 @@
   line-height: 24px;
   font-size: 15px;
   margin-bottom: 0;
-  color: #a709e8;
+  color: gray;
   font-weight: 600;
   word-spacing: 1px;
 }
