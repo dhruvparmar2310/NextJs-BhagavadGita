@@ -31,118 +31,255 @@ function Wallpapers() {
             </div>
         </section>
 
-        <section id="about-us" className={`${styles.about_us}`} style={{ height: 'auto' }}>
+        <section id="services" className={`${styles.about_us} ${styles.section_bg}`}>
           <div className="container" data-aos="fade-up">
 
-            <div className={`section_title`}>
-              <h2>Wallpapers</h2>
+            <div className="section_title">
+              <h2>Wallpaper</h2>
+              <p></p>
             </div>
 
-            <div className={`container ${styles.content}`} style={{ textAlign: 'justify', fontSize: '25px', wordSpacing: '3px' }}>
-              <div className={`row ${styles.description} ${ysabeau.className}`} id="description" data-aos="fade-left" style={{ marginTop: '0', fontStyle: 'italic' }}>
-
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/1.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
+            <div className={`row ${styles.content}`}>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                    <Image 
+                      src={'/assets/wallpaper/1.jpeg'} 
+                      className="card-img-top" 
+                      width={300}
+                      height={250}
+                      alt='Dark Wallpaper Lord Krishna'
+                      quality={100}
+                    />
+                    <div className={`${styles.card_body} row`}>
+                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Dark Wallpaper Lord Krishna</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/1.jpeg', 'Dark-Wallpaper-Lord-Krishna')} className='col-lg-2'>
+                        <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                      </p>
                     </div>
                 </div>
+              </div>
 
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/2.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/2.jpeg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Dark Wallpaper Krishna'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Dark Wallpaper Krishna</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/2.jpeg', 'Dark-Wallpaper-Krishna')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/3.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
-                    </div>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/6.jpg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Radha Krishna'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Radha Krishna</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/6.jpg', 'RadhaKrishna')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
                 </div>
-                
               </div>
             </div>
 
-            {/* row second */}
-            <div className={`container ${styles.content}`} style={{ textAlign: 'justify', fontSize: '25px', wordSpacing: '3px' }}>
-              <div className={`row ${styles.description} ${ysabeau.className}`} id="description" data-aos="fade-left" style={{ marginTop: '10px', fontStyle: 'italic' }}>
-
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/4.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
+            {/* second row */}
+            <div className={`row ${styles.content}`}>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                    <Image 
+                      src={'/assets/wallpaper/cartoon-of-lord-krishna-with-flute-krishna.jpeg'} 
+                      className="card-img-top" 
+                      width={300}
+                      height={250}
+                      alt='Cartoon of Lord Krishna'
+                      quality={100}
+                    />
+                    <div className={`${styles.card_body} row`}>
+                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Cartoon of Lord Krishna</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/cartoon-of-lord-krishna-with-flute-krishna.jpeg', 'Cartoon of Lord Krishna')} className='col-lg-2'>
+                        <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                      </p>
                     </div>
                 </div>
+              </div>
 
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/dwarka-temple.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/kanha-and-radha-rani.jpeg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Kanha and Radha Rani'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Kanha and Radha Rani</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/kanha-and-radha-rani.jpeg', 'Kanha and Radha Rani')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/HD-wallpaper-little-krishna-cartoon-krishna.jpeg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Lord Krishna cute wallpaper'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Lord Krishna cute wallpaper</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/HD-wallpaper-little-krishna-cartoon-krishna.jpeg', 'Lord Krishna cute wallpaper')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* third row */}
+            <div className={`row ${styles.content}`}>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                    <Image 
+                      src={'/assets/wallpaper/dwarka.jpeg'} 
+                      className="card-img-top" 
+                      width={300}
+                      height={250}
+                      alt='Dwarka'
+                      quality={100}
+                    />
+                    <div className={`${styles.card_body} row`}>
+                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Shri Dwarkadhish Temple, Dwarka</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/dwarka.jpeg', 'Dwarka')} className='col-lg-2'>
+                        <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                      </p>
                     </div>
                 </div>
+              </div>
 
-                <div className={`col-lg-4`}>
-                    <div className={`card ${styles.card}`} style={{ width: '18rem' }}>
-                        <Image
-                            src={'/assets/wallpaper/3.jpeg'}
-                            width={500}
-                            height={500}
-                            alt=''
-                            className='img-fluid'
-                        />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                        </div>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/vrindavan.jpeg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Vrindavan Dham'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Shri Vrindavan Dham, Mathura</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/vrindavan.jpeg', 'Vrindavan Dham')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/Mayapur.jpeg'} 
+                    className="card-img-top" 
+                    width={300}
+                    height={250}
+                    alt='Mayapur Dham, West Bengal'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Shri Mayapur Dham, West Bengal</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/Mayapur.jpeg', 'Mayapur Dham West Bengal')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* fourth row */}
+            <div className={`row ${styles.content}`}>
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                    <Image 
+                      src={'/assets/wallpaper/4.jpeg'} 
+                      className="card-img-top" 
+                      width={100}
+                      height={500}
+                      alt='Hare Krishna'
+                      quality={100}
+                    />
+                    <div className={`${styles.card_body} row`}>
+                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Hare Krishna</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/4.jpeg', 'Hare Krishna')} className='col-lg-2'>
+                        <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                      </p>
                     </div>
                 </div>
-                
+              </div>
+
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/BeCMbG.webp'} 
+                    className="card-img-top" 
+                    width={100}
+                    height={500}
+                    alt='Shri Krishna Dark Wallpaper'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Shri Krishna Dark Wallpaper</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/BeCMbG.webp', 'Shri Krishna Dark Wallpaper')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+                <div className={`${styles.icon_box}`}>
+                  <Image 
+                    src={'/assets/wallpaper/dark-wallpaper-of-kanha.jpeg'} 
+                    className="card-img-top" 
+                    width={100}
+                    height={500}
+                    alt='Krishna Wallpaper'
+                    quality={100}
+                  />
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Krishna Wallpaper</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/dark-wallpaper-of-kanha.jpeg', 'Krishna Wallpaper')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
           </div>
-      </section>
+        </section>
     </>
   )
 }

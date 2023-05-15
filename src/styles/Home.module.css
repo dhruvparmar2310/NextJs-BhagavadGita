@@ -220,7 +220,14 @@
   /* padding: 70px 20px 80px 20px; */
   transition: all ease-in-out 0.3s;
   background: #fff;
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.199);
+  border-radius: 10px;
 }
+
+.services .icon_box img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+} 
 
 .services .icon_box .icon {
   margin: 0 auto;
@@ -270,8 +277,7 @@
 }
 
 .services .icon_box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+  box-shadow:  0px 0 40px rgba(0, 0, 0, 0.338);
 }
 
 .services .iconbox_blue i {
@@ -344,5 +350,15 @@
 
 .services .iconbox_teal:hover .icon path {
   fill: #11dbcf;
+}
+
+.services .card_body {
+  box-sizing: border-box;
+  padding: 10px !important;
+}
+
+.services .card_body h4 {
+  text-align: start;
+  margin: 0;
 }
   

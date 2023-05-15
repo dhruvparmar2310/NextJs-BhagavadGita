@@ -33,9 +33,72 @@
     letter-spacing: 0.1mm;
     text-transform: uppercase;
   }
-  
-.card {
+
+
+  .about_us .icon_box {
+    text-align: center;
+    /* padding: 70px 20px 80px 20px; */
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.199);
     margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .about_us .icon_box img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .about_us .icon_box .icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    position: relative;
+  }
+  
+  .about_us .icon_box .icon i {
+    font-size: 36px;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .about_us .icon_box h4 {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  .about_us .icon_box h4 a {
+    color: #00adff;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .about_us .icon_box p {
+    line-height: 24px;
+    font-size: 15px;
+    margin-bottom: 0;
+    color: gray;
+    font-weight: 600;
+    word-spacing: 1px;
+  }
+  
+  .about_us .icon_box:hover {
+    border-color: #fff;
+    box-shadow: 0px 0 40px rgba(0, 0, 0, 0.338);
+  }
+  
+.about_us .content .card_body {
+  box-sizing: border-box;
+  padding: 10px !important;
+}
+
+.about_us .content .card_body h4 {
+  text-align: start;
+  margin: 0;
 }
 
 /* ISKCON */

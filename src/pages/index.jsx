@@ -5,9 +5,6 @@ import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import bookCover from '../../public/book_cover.jpg'
-import wallpaperOne from '../../public/assets/wallpaper/1.jpeg'
-import wallpaperTwo from '../../public/assets/wallpaper/2.jpeg'
-import wallpaperThree from '../../public/assets/wallpaper/3.jpeg'
 import Link from 'next/link'
 import { saveAs } from 'file-saver'
 
@@ -93,16 +90,16 @@ export default function Home() {
               <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                     <Image 
-                      src={wallpaperOne.src} 
+                      src={'/assets/wallpaper/1.jpeg'} 
                       className="card-img-top" 
                       width={300}
-                      height={200}
+                      height={250}
                       alt='Dark Wallpaper Lord Krishna'
                     />
-                    <div className='card-body'>
-                      <h4 className={`card-title ${ysabeau.className}`}>Dark Wallpaper Lord Krishna</h4>
-                      <p onClick={() => saveAs('/assets/wallpaper/1.jpeg', 'Dark-Wallpaper-Lord-Krishna')}>
-                        <i className="ri-download-2-line" style={{ fontSize: '25px' }}></i>
+                    <div className={`${styles.card_body} row`}>
+                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Dark Wallpaper Lord Krishna</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/1.jpeg', 'Dark-Wallpaper-Lord-Krishna')} className='col-lg-2'>
+                        <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
                       </p>
                     </div>
                 </div>
@@ -111,16 +108,16 @@ export default function Home() {
               <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                   <Image 
-                    src={wallpaperTwo.src} 
+                    src={'/assets/wallpaper/2.jpeg'} 
                     className="card-img-top" 
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={250}
                     alt='Dark Wallpaper Krishna'
                   />
-                  <div className='card-body'>
-                    <h4 className={`card-title ${ysabeau.className}`}>Dark Wallpaper Krishna</h4>
-                    <p onClick={() => saveAs('/assets/wallpaper/2.jpeg', 'Dark-Wallpaper-Krishna')}>
-                      <i className="ri-download-2-line" style={{ fontSize: '25px' }}></i>
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Dark Wallpaper Krishna</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/2.jpeg', 'Dark-Wallpaper-Krishna')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
                     </p>
                   </div>
                 </div>
@@ -129,22 +126,22 @@ export default function Home() {
               <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                   <Image 
-                    src={wallpaperThree.src} 
+                    src={'/assets/wallpaper/6.jpg'} 
                     className="card-img-top" 
                     width={300}
-                    height={300}
-                    alt='Bhagavad Gita'
+                    height={250}
+                    alt='Radha Krishna'
                   />
-                  <div className='card-body'>
-                    <h4 className={`card-title ${ysabeau.className}`}>Bhagavad Gita</h4>
-                    <p onClick={() => saveAs('/assets/wallpaper/3.jpeg', 'Bhagavad Gita')}>
-                      <i className="ri-download-2-line" style={{ fontSize: '25px' }}></i>
+                  <div className={`${styles.card_body} row`}>
+                    <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Radha Krishna</h4>
+                    <p onClick={() => saveAs('/assets/wallpaper/6.jpg', 'RadhaKrishna')} className='col-lg-2'>
+                      <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <span className='text-center mt-5'>
+              <span className='mt-5' style={{ width: '20%', margin: '0 auto', textAlign: 'center' }}>
                 <Link href={'/about/wallpapers'}>View All</Link>
               </span>
             </div>
