@@ -5,24 +5,39 @@ import Link from 'next/link'
 import styles from '../styles/Bhajan.module.css'
 import axios from 'axios'
 import Image from 'next/image'
+import VideoPlayer from '@/components/VideoPlayer'
+import MusicList from '@/components/MusicList'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
 function Bhajan() {
-  const [list, setList] = useState([])
+  const [id, setID] = useState()
+  const [musicList, setMusicList] = useState([])
+  const [videoList, setVideoList] = useState([]) 
   const [musicDetails, setMusicDetails] = useState([])
+  const [videoDetails, setVideoDetails] = useState([])
 
-    const getMusicList = () => {
-        const response = axios.get('/api/music')
-        .then(data => {
-            setList(data?.data)
-            console.log('data :>> ', data?.data);
-        })
+    const getMusic = () => {
+      const response = axios.get('/api/bhajan/music')
+      .then(data => {
+        setMusicList(data?.data)
+      })
+      return response
     }
+    console.log('music :>> ', musicDetails);
 
-    console.log('musicDetails?.src :>> ', musicDetails?.src);
+    const getVideo = () => {
+      const response = axios.get('/api/bhajan/video')
+      .then(data => {
+        setVideoList(data?.data)
+      })
+      return response
+    }
+    console.log('video :>> ', videoDetails);
+
     useEffect(() => {
-      getMusicList()
+      getMusic()
+      getVideo()
     }, [])
   return (
     <>
@@ -44,44 +59,95 @@ function Bhajan() {
               <h2 style={{ color: 'white', textShadow: '-3px 5px 10px #1e1e1e', letterSpacing: '1px' }}>Bhajan Page</h2>
             </div>
 
+            <div className={`${styles.content} row`} style={{ height: '5%', marginBottom: '10px' }}>
+              <div className={`col`}>
+                <ul className="nav justify-content-center">
+                  <li className="nav-item">
+                    <Link className="nav-link" href="#" id='music' onClick={(e) => setID(e.target.id)}>Music</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" href="#" id='video' onClick={(e) => setID(e.target.id)}>Video</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             <div className={`${styles.content} row`}>
               <div className={`col ${styles.musicList}`}>
-                <h1 className={`${ysabeau.className}`}>Music List</h1>
-                <table className={`table table-responsive table-borderless table-hover mt-3`}>
-                  <tbody>
-                    {list?.map((item, index) => {
-                      return (
-                        <React.Fragment key={index}>
-                          <tr>
-                            <td>{item?.id}</td>
-                            <td>{item?.title}</td>
-                            <td>
-                              <button className={`btn btn-sm btn-dark`} onClick={() => setMusicDetails(item)}>Play</button>
-                            </td>
-                          </tr>
-                        </React.Fragment>
-                      )
-                    })}
-                  </tbody>
-                </table>
+                {
+                  id === 'music' ?  
+                  <>
+                    <h1 className={`${ysabeau.className}`}>Music List</h1>
+                    <table className={`table table-responsive table-borderless table-hover mt-3`}>
+                      <tbody>
+                        {musicList?.map((item, index) => {
+                          return (
+                            <React.Fragment key={index}>
+                              <MusicList item={item} setMusicDetails={setMusicDetails} />
+                            </React.Fragment>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </> 
+                  :  <>
+                    <h1 className={`${ysabeau.className}`}>Video List</h1>
+                    <table className={`table table-responsive table-borderless table-hover mt-3`}>
+                      <tbody>
+                        {videoList?.map((item, index) => {
+                          return (
+                            <React.Fragment key={index}>
+                              <tr>
+                                <td>{item?.id}</td>
+                                <td>{item?.title}</td>
+                                <td>
+                                  <button className={`btn btn-sm btn-dark`} onClick={() => setVideoDetails(item)}>Play</button>
+                                  {console.log('videoDetails >> ', videoDetails)}
+                                </td>
+                              </tr>
+                            </React.Fragment>
+                          )
+                        })}
+                      </tbody>
+                    </table>
+                  </>
+                }  
               </div>
-              <div className={`col ${styles.musicPlayer}`}>
-                <div className='card' style={{ width: '18rem' }}>
 
-                  <Image 
-                    src={musicDetails?.src} 
-                    className="card-img-top" 
-                    width={100}
-                    height={100}
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                  
+              <div className={`col ${styles.player}`}>
+                {
+                  id === 'music' ? 
+                  <>
+                    <div className='card' style={{ width: '18rem' }}>
+                      <Image 
+                        src={musicDetails?.src} 
+                        className="card-img-top" 
+                        width={100}
+                        height={100}
+                        alt="..."
+                      />
+                      <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div>
+                  </> : 
+                  <>
+                    <div className={styles.videoPlayer}>
+                      {/* {
+                        videoDetails?.map((item, index) => {
+                          return (
+                            <React.Fragment key={index}>
+                              <VideoPlayer item={item} />
+                            </React.Fragment>
+                          )
+                        })
+                      } */}
+                      <VideoPlayer videoDetails={videoDetails} videoList={videoList} />
+                    </div>
+                  </>
+                }   
               </div>
             </div>
           </div>

@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/about/wallpapers": [
+    "/bhajan": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/about/wallpapers.js"
+      "static/chunks/pages/bhajan.js"
     ]
   },
   "ampFirstPages": []
