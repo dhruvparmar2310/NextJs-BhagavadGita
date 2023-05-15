@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
-import { Ysabeau } from 'next/font/google'
 import Link from 'next/link'
 import styles from '../styles/Bhajan.module.css'
 import axios from 'axios'
-import Image from 'next/image'
 import VideoPlayer from '@/components/VideoPlayer'
 import MusicList from '@/components/MusicList'
-
-const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
+import VideoList from '@/components/VideoList'
+import MusicPlayer from '@/components/MusicPlayer'
 
 function Bhajan() {
   const [id, setID] = useState()
@@ -24,7 +22,6 @@ function Bhajan() {
       })
       return response
     }
-    console.log('music :>> ', musicDetails);
 
     const getVideo = () => {
       const response = axios.get('/api/bhajan/video')
@@ -33,7 +30,6 @@ function Bhajan() {
       })
       return response
     }
-    console.log('video :>> ', videoDetails);
 
     useEffect(() => {
       getMusic()
@@ -76,74 +72,17 @@ function Bhajan() {
               <div className={`col ${styles.musicList}`}>
                 {
                   id === 'music' ?  
-                  <>
-                    <h1 className={`${ysabeau.className}`}>Music List</h1>
-                    <table className={`table table-responsive table-borderless table-hover mt-3`}>
-                      <tbody>
-                        {musicList?.map((item, index) => {
-                          return (
-                            <React.Fragment key={index}>
-                              <MusicList item={item} setMusicDetails={setMusicDetails} />
-                            </React.Fragment>
-                          )
-                        })}
-                      </tbody>
-                    </table>
-                  </> 
-                  :  <>
-                    <h1 className={`${ysabeau.className}`}>Video List</h1>
-                    <table className={`table table-responsive table-borderless table-hover mt-3`}>
-                      <tbody>
-                        {videoList?.map((item, index) => {
-                          return (
-                            <React.Fragment key={index}>
-                              <tr>
-                                <td>{item?.id}</td>
-                                <td>{item?.title}</td>
-                                <td>
-                                  <button className={`btn btn-sm btn-dark`} onClick={() => setVideoDetails(item)}>Play</button>
-                                  {console.log('videoDetails >> ', videoDetails)}
-                                </td>
-                              </tr>
-                            </React.Fragment>
-                          )
-                        })}
-                      </tbody>
-                    </table>
-                  </>
+                  <MusicList musicList={musicList} setMusicDetails={setMusicDetails} /> 
+                  :  <VideoList videoList={videoList} setVideoDetails={setVideoDetails} />
                 }  
               </div>
 
               <div className={`col ${styles.player}`}>
                 {
                   id === 'music' ? 
-                  <>
-                    <div className='card' style={{ width: '18rem' }}>
-                      <Image 
-                        src={musicDetails?.src} 
-                        className="card-img-top" 
-                        width={100}
-                        height={100}
-                        alt="..."
-                      />
-                      <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </> : 
+                    <MusicPlayer musicDetails={musicDetails} /> : 
                   <>
                     <div className={styles.videoPlayer}>
-                      {/* {
-                        videoDetails?.map((item, index) => {
-                          return (
-                            <React.Fragment key={index}>
-                              <VideoPlayer item={item} />
-                            </React.Fragment>
-                          )
-                        })
-                      } */}
                       <VideoPlayer videoDetails={videoDetails} videoList={videoList} />
                     </div>
                   </>
