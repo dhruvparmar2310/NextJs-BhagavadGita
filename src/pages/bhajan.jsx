@@ -70,17 +70,17 @@ function Bhajan() {
 
             <div className={`${styles.content} row`}>
               <div className={`col ${styles.musicList}`}>
+                <MusicList musicList={musicList} setMusicDetails={setMusicDetails} /> 
                 {
-                  id === 'music' ?  
-                  <MusicList musicList={musicList} setMusicDetails={setMusicDetails} /> 
-                  :  <VideoList videoList={videoList} setVideoDetails={setVideoDetails} />
+                  id === 'video' &&  
+                    <VideoList videoList={videoList} setVideoDetails={setVideoDetails} />
                 }  
               </div>
 
               <div className={`col ${styles.player}`}>
+                <MusicPlayer musicDetails={musicDetails} />
                 {
-                  id === 'music' ? 
-                    <MusicPlayer musicDetails={musicDetails} /> : 
+                  id === 'video' && 
                   <>
                     <div className={styles.videoPlayer}>
                       <VideoPlayer videoDetails={videoDetails} videoList={videoList} />
