@@ -2,5 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
+=======
+  "/bhajan": "pages/bhajan.js",
+  "/api/bhajan/video": "pages/api/bhajan/video.js",
+  "/api/bhajan/music": "pages/api/bhajan/music.js",
+>>>>>>> origin/main
   "/": "pages/index.js"
 }
