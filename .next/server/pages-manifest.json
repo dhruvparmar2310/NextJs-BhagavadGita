@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/bhajan": "pages/bhajan.js"
+  "/api/bhajan/music": "pages/api/bhajan/music.js",
+  "/bhajan": "pages/bhajan.js",
+  "/api/bhajan/video": "pages/api/bhajan/video.js"
 }

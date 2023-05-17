@@ -36,9 +36,17 @@ function MusicPlayer ({ musicList, musicDetails }) {
             />
 
             <div className='row'>
-              <div className={`col ${styles.music_control} text-center`}>
+              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
+                <audio ref={audioRef} src={musicDetails?.music} />
+                <span><i className="ri-skip-back-fill" style={{ fontSize: '25px' }}></i></span>
+              </div>
+              <div className={`col-lg-4 ${styles.music_control} text-center`}>
                 <audio ref={audioRef} src={musicList[0]?.music} />
                 <span onClick={handlePlay}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
+              </div>
+              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                <audio ref={audioRef} src={musicDetails?.music} />
+                <span><i className="ri-skip-forward-fill" style={{ fontSize: '25px' }}></i></span>
               </div>
             </div>
             <div className={`${styles.card_body} pt-0`}>
@@ -78,9 +86,17 @@ function MusicPlayer ({ musicList, musicDetails }) {
                 alt="..."
             />
             <div className='row'>
-              <div className={`col ${styles.music_control} text-center`}>
+              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
                 <audio ref={audioRef} src={musicDetails?.music} />
-                <span onClick={() => handlePlay()}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
+                <span><i className="ri-skip-back-fill" style={{ fontSize: '25px' }}></i></span>
+              </div>
+              <div className={`col-lg-4 ${styles.music_control} text-center`}>
+                <audio ref={audioRef} src={musicDetails?.music} />
+                <span onClick={() => handlePlay()}>{isPlaying ? <i className="ri-pause-circle-line"></i> : <i className="ri-play-circle-line"></i>}</span>
+              </div>
+              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                <audio ref={audioRef} src={musicDetails?.music} />
+                <span><i className="ri-skip-forward-fill" style={{ fontSize: '25px' }}></i></span>
               </div>
             </div>
             <div className={`${styles.card_body} pt-0`}>
