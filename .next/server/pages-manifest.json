@@ -2,6 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/api/bhajan/music": "pages/api/bhajan/music.js",
-  "/api/bhajan/video": "pages/api/bhajan/video.js"
+  "/bhajan": "pages/bhajan.js"
 }

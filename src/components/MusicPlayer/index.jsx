@@ -1,29 +1,115 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
+import styles from '../../styles/Bhajan.module.css'
+import { Ysabeau } from 'next/font/google'
 
-function MusicPlayer ({ musicDetails }) {
+const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600', '700'], style: ['normal', 'italic'] })
+
+function MusicPlayer ({ musicList, musicDetails }) {
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = React.createRef()
+
+  const handlePlay = () => {
+    const audioElement = audioRef.current
+
+    if (isPlaying) {
+      audioElement.pause()
+    } else {
+      audioElement.play()
+    }
+
+    setIsPlaying(!isPlaying)
+  }
+
   return (
     <>
-        <div className='card' style={{ width: '18rem' }}>
+      {
+        musicDetails.length === 0 ? 
+        <>
+          <div className={`${styles.card}`}>
+            <Image
+              src={musicList[0]?.src}
+              className="card-img-top"
+              width={100}
+              height={300}
+              alt="..." 
+            />
+
+            <div className='row'>
+              <div className={`col ${styles.music_control} text-center`}>
+                <audio ref={audioRef} src={musicList[0]?.music} />
+                <span onClick={handlePlay}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
+              </div>
+            </div>
+            <div className={`${styles.card_body} pt-0`}>
+              <table className='table table-responsive table-borderless'>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p className={`${ysabeau.className} m-0`}>Title</p>
+                    </td>
+                    <td>:</td>
+                    <td>
+                      <p className='m-0'>{musicList[0]?.title}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p className={`${ysabeau.className} m-0`}>Artist</p>
+                    </td>
+                    <td>:</td>
+                    <td>
+                      <p className='m-0'>{musicList[0]?.artist}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </>
+        :
+        <>
+          <div className={`${styles.card}`}>
             <Image
                 src={musicDetails?.src} 
                 className="card-img-top" 
                 width={100}
-                height={100}
+                height={300}
                 alt="..."
             />
             <div className='row'>
-              <div className={`col`}>
-                <audio ref={audioRef} src={src} />
-                <span onClick={handlePlay}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
+              <div className={`col ${styles.music_control} text-center`}>
+                <audio ref={audioRef} src={musicDetails?.music} />
+                <span onClick={() => handlePlay()}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
               </div>
             </div>
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+            <div className={`${styles.card_body} pt-0`}>
+              <table className='table table-responsive table-borderless'>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p className={`${ysabeau.className} m-0`}>Title</p>  
+                    </td>
+                    <td>:</td>
+                    <td>
+                      <p className='m-0'>{musicDetails?.title}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p className={`${ysabeau.className} m-0`}>Artist</p>  
+                    </td>
+                    <td>:</td>
+                    <td>
+                      <p className='m-0'>{musicDetails?.artist}</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-        </div> 
+          </div> 
+        </> 
+      }  
     </>
   )
 }

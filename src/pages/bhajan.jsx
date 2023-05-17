@@ -47,11 +47,11 @@ function Bhajan() {
         </Head>
 
         <video src='/assets/video/bg.mp4' autoPlay loop muted className={styles.myVideo} />
-        <section id="about-us" className={`${styles.bhajan}`} style={{ height: 'auto' }}>
+        <section id="about-us" className={`${styles.bhajan}`} >
 
           <div className="container" data-aos="fade-up">
 
-            <div className={`section_title mt-5`}>
+            <div className={`section_title mt-5 pb-0`}>
               <h2 style={{ color: 'white', textShadow: '-3px 5px 10px #1e1e1e', letterSpacing: '1px' }}>Bhajan Page</h2>
             </div>
 
@@ -84,7 +84,7 @@ function Bhajan() {
                     <VideoPlayer videoDetails={videoDetails} videoList={videoList} />
                   </div>
                    : 
-                  <MusicPlayer musicDetails={musicDetails} />
+                  <MusicPlayer musicDetails={musicDetails} musicList={musicList} />
                 }   
               </div>
             </div>
