@@ -2,9 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/contact": "pages/contact.js",
-  "/api/bhajan/video": "pages/api/bhajan/video.js",
-  "/bhajan": "pages/bhajan.js",
-  "/api/bhajan/music": "pages/api/bhajan/music.js",
   "/": "pages/index.js"
 }
