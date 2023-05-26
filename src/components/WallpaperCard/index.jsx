@@ -21,9 +21,9 @@ function WallpaperCard({ src, width, height, alt, title }) {
                 />
             </div>
             <div className={`${styles.card_body} row`}>
-                <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>{title}</h4>
-                <p onClick={() => saveAs(`${src}`, `${title}`)} className='col-lg-2'>
-                    <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
+                <h4 className={`col-lg-10 col-sm-10 card-title ${ysabeau.className}`}>{title}</h4>
+                <p onClick={() => saveAs(`${src}`, `${title}`)} className='col-lg-2 col-sm-2'>
+                    <i className="ri-heart-fill"></i>
                 </p>
             </div>
         </div> 

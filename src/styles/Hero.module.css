@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-.carousel, .carousel_inner, .carousel_item, .carousel_item::before {
+.carousel .carousel_inner {
   background-image: url('../../public/assets/banner/gita.jpg');
   background-size: cover;
   background-position: center;
@@ -167,8 +167,45 @@
   }
 }
 
-@media (max-height: 500px) {
-  #hero {
-    height: 120vh;
+@media (max-width: 576px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .carousel_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    bottom: 15rem;
+    top: 10px;
+    left: 55px;
+    right: 55px;
+  }
+
+  .carousel_content {
+    width: 100%;
+    background: rgba(4, 4, 4, 0.7);
+    padding: 10px;
+    border-top: 3px solid var(--theme);
+    letter-spacing: 0.1mm;
+    word-spacing: 1px;
+  }
+
+  .carousel_content h2 {
+    margin-bottom: 2px;
+    font-size: 20px;
+  }
+
+  .carousel_content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .btn_get_started {
+    font-size: 13px;
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid var(--theme);
   }
 }

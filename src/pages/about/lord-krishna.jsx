@@ -86,12 +86,12 @@ function LordKrishna() {
                 <p>
                     In modern times, Dwarka has been rebuilt as a city and is considered one of the <span>7th</span> most ancient cities in India. It is a popular pilgrimage site for Hindus, who visit the city to pay their respects to Lord Krishna and the other deities who are worshipped there. The city is also known for its <span>temples</span>, including the <span>Dwarkadhish Temple</span>, also known as <span>Jaggat Mandir of Dwarka</span> which is dedicated to <span>Lord Krishna</span>.
                 </p>
-                <iframe style={{ marginTop: '20px', marginBottom: '20px' }} width="300" height="560" src="https://www.youtube-nocookie.com/embed/p8BAOvuBDJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube-nocookie.com/embed/p8BAOvuBDJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                 <h3 className={`mt-3 ${ysabeau.className}`}>
                   <span>Avatars of Lord Krishna</span>:
                 </h3><hr/>
-                <div>
+                <div className={styles.avtar_list}>
                     <ol>
                         <li>
                             Matsya Avatar: 

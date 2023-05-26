@@ -15,7 +15,7 @@ function Footer () {
                 <div className="container">
                     <div className="row">
 
-                        <div className={`col-lg-3 col-md-6 ${styles.footer_contact}`} style={{ width: '20rem' }}>
+                        <div className={`col-lg-3 col-md-6 col-sm-12 ${styles.footer_contact}`} style={{ width: '20rem' }}>
                             <h3>
                                 <Link href="/" className={ysabeau.className}>Bhagavad <span>Gita</span></Link>
                             </h3>
@@ -26,7 +26,7 @@ function Footer () {
                             </p>
                         </div>
 
-                        <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
+                        <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Useful Links</h4>
                             <ul className={ysabeau.className}>
                                 <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
@@ -36,7 +36,7 @@ function Footer () {
                             </ul>
                         </div>
 
-                        <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
+                        <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Useful Links</h4>
                             <ul className={ysabeau.className}>
                                 <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
@@ -46,7 +46,7 @@ function Footer () {
                             </ul>
                         </div>
 
-                        <div className={`col-lg-3 col-md-6 ${styles.footer_links}`}>
+                        <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Reading</h4>
                             <ul>
                                 <li><i class="ri-arrow-right-s-line"></i> <Link href="/about">Book</Link></li>

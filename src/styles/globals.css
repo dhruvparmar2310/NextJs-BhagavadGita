@@ -66,6 +66,28 @@ section {
   margin-bottom: 0;
 }
 
+@media (max-width: 576px) {
+  section {
+    padding: 50px 0;
+    /* overflow: hidden; */
+  }
+  
+  .section_title h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .section_title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 85px;
+    height: 3px;
+    bottom: 15px;
+    left: calc(50% - 40px);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs

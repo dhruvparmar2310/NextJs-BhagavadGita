@@ -146,4 +146,30 @@
     color: #fff;
     text-decoration: none;
   }
+
+  @media (max-width: 576px) {
+    .footer .footer_top {
+      padding: 40px 0px 30px 10px;
+      background: #1e1e1e;
+    }
+
+    .footer .footer_top .footer_contact {
+      margin-bottom: 30px;
+      width: 100vw !important;
+    }
+    
+    .footer .social_links a {
+      font-size: 17px;
+      padding: 6px 0;
+      width: 34px;
+      margin-right: 5px;
+    }
+    
+    .footer .social_links a:hover {
+      background: #0055ff;
+      color: #fff;
+      text-decoration: none;
+    }
+    
+  }
   

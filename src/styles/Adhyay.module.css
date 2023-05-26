@@ -126,10 +126,24 @@
   .adhyay table tr:hover {
     content: '';
     background-color: var(--hover);
-    box-shadow: 0 0 10px rgba(94, 94, 94, 0.77);
+    box-shadow: inset 0 0 10px rgba(94, 94, 94, 0.77);
     cursor: zoom-in;
     border: none;
-    transform: scale(1.02);
+    transform: scale(1);
+  }
+
+  @media (max-width: 576px) {
+    .adhyay table {
+      margin-top: 10px !important;
+    }
+
+    .adhyay table tr td {
+      font-size: 14px;
+    }
+
+    .adhyay table tr td button {
+      font-size: 10px;
+    }
   }
 
 

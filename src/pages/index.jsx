@@ -87,31 +87,33 @@ export default function Home() {
             </div>
 
             <div className="row">
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+              <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                     <Image 
                       src={'/assets/wallpaper/1.jpeg'} 
                       className="card-img-top" 
                       width={300}
                       height={250}
+                      quality={100}
                       alt='Dark Wallpaper Lord Krishna'
                     />
                     <div className={`${styles.card_body} row`}>
-                      <h4 className={`col-lg-10 card-title ${ysabeau.className}`}>Dark Wallpaper Lord Krishna</h4>
-                      <p onClick={() => saveAs('/assets/wallpaper/1.jpeg', 'Dark-Wallpaper-Lord-Krishna')} className='col-lg-2'>
+                      <h4 className={`col-lg-10 col-md-6 col-sm-10 card-title ${ysabeau.className}`}>Dark Wallpaper Lord Krishna</h4>
+                      <p onClick={() => saveAs('/assets/wallpaper/1.jpeg', 'Dark-Wallpaper-Lord-Krishna')} className='col-lg-2 col-md-6 col-sm-2'>
                         <i className="ri-heart-fill" style={{ fontSize: '25px', color: 'red', cursor: 'pointer' }}></i>
                       </p>
                     </div>
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+              <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                   <Image 
                     src={'/assets/wallpaper/2.jpeg'} 
                     className="card-img-top" 
                     width={500}
                     height={250}
+                    quality={100}
                     alt='Dark Wallpaper Krishna'
                   />
                   <div className={`${styles.card_body} row`}>
@@ -123,13 +125,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
+              <div className="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100" style={{ justifyContent: 'center' }}>
                 <div className={`card ${styles.icon_box}`}>
                   <Image 
                     src={'/assets/wallpaper/6.jpg'} 
                     className="card-img-top" 
                     width={300}
                     height={250}
+                    quality={100}
                     alt='Radha Krishna'
                   />
                   <div className={`${styles.card_body} row`}>
@@ -141,8 +144,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <span className='mt-5' style={{ width: '20%', margin: '0 auto', textAlign: 'center' }}>
-                <Link href={'/about/wallpapers'}>View All</Link>
+              <span className={`mt-5 ${styles.viewAll_btn}`}>
+                <Link href={'/about/wallpapers'} className={ysabeau.className}>View All</Link>
               </span>
             </div>
 
