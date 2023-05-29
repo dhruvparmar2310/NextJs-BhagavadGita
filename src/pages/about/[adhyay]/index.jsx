@@ -10,20 +10,8 @@ import Head from 'next/head'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
-function Adhyay({ router }) {
-    const [list, setList] = useState([])
+function Adhyay({ router, adhyay}) {
 
-    const getAdhyayList = () => {
-        const response = axios.get('/api/adhyay')
-        .then(data => {
-            setList(data?.data)
-            console.log('data :>> ', data?.data);
-        })
-    }
-
-    useEffect(() => {
-        getAdhyayList()
-    }, [])
   return (
     <>
         <Head>
@@ -81,19 +69,19 @@ function Adhyay({ router }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {list?.map((items, index) => {
-                                return (
-                                    <React.Fragment key={index}>
-                                        <tr>
-                                            <td>{items?.id}</td>
-                                            <td>{items?.title}</td>
-                                            <td>
-                                                <button className={`btn btn-sm btn-outline-dark`} onClick={() => router.push(`/about/adhyay/${index + 1}`)}>Read</button>
-                                            </td>
-                                        </tr>
-                                    </React.Fragment>
-                                )
-                            })}
+                        {adhyay?.map((items, index) => {
+                            return (
+                                <React.Fragment key={index}>
+                                    <tr>
+                                        <td>{items?.id}</td>
+                                        <td>{items?.title}</td>
+                                        <td>
+                                            <button className={`btn btn-sm btn-outline-dark`} onClick={() => router.push(`/about/adhyay/${index + 1}`)}>Read</button>
+                                        </td>
+                                    </tr>
+                                </React.Fragment>
+                            )
+                        })}
                     </tbody>
                 </table>
             </div>
@@ -103,3 +91,10 @@ function Adhyay({ router }) {
 }
 
 export default withRouter(Adhyay)
+
+
+export const getServerSideProps = async () => {
+    const res = await fetch('http://localhost:3000/api/adhyay')
+    const adhyay = await res.json()
+    return { props: { adhyay } }
+}
