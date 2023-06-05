@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/about/[adhyay]": [
+    "/about/[adhyay]/[adhyayID]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/about/[adhyay].js"
+      "static/chunks/pages/about/[adhyay]/[adhyayID].js"
     ]
   },
   "ampFirstPages": []

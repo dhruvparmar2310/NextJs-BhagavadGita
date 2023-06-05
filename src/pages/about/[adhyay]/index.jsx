@@ -92,7 +92,6 @@ function Adhyay({ router, adhyay}) {
 
 export default withRouter(Adhyay)
 
-
 export const getServerSideProps = async () => {
     const res = await fetch('http://localhost:3000/api/adhyay')
     const adhyay = await res.json()

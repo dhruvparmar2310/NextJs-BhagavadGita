@@ -11,24 +11,25 @@ import Head from 'next/head'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
-function AdhyayID() {
+function AdhyayID ({ adhyay }) {
     const [data, setData] = useState([])
     const [id, setId] = useState('')
     const router = useRouter()
     const {adhyayID} = router.query
 
-  const fetchAdhyay = () => {
-    const response = axios.get(`/api/adhyay/${adhyayID}`)
-    .then(data => {
-      console.log('data >> ', data?.data)
-      setData(data?.data)
-    })
-  } 
+  // const fetchAdhyay = () => {
+  //   const response = axios.get(`/api/adhyay/${adhyayID}`)
+  //   .then(data => {
+  //     console.log('data >> ', data?.data)
+  //     setData(data?.data)
+  //   })
+  // } 
 
-  useEffect(() => {
-    fetchAdhyay()
-    console.log('adhyayID :>> ', adhyayID);
-  }, [])
+  // useEffect(() => {
+  //   fetchAdhyay()
+  //   console.log('adhyayID :>> ', adhyayID);
+  // }, [])
+  console.log('adhyay :>> ', adhyay);
   return (
     <>
         <Head>
@@ -110,3 +111,39 @@ function AdhyayID() {
 }
 
 export default AdhyayID
+
+export const getStaticPaths = async () => {
+  const paths = []
+
+  for (let i = 1; i <= 18; i++) {
+    paths.push({
+      params: {
+        adhyay: 'some-value',
+        adhyayID: i.toString(),
+      },
+    })
+  }
+  return {
+    // paths: [
+    //   {
+    //     params: {
+    //       adhyay: 'some-value',
+    //       adhyayID: '1',
+    //     },
+    //   }, // See the "paths" section below
+    // ],
+    paths: paths,
+    fallback: true, // false or "blocking"
+  }
+}
+ 
+export const getStaticProps = async ({ params }) => {
+  const adhyayID = parseInt(params.adhyayID)
+  if (adhyayID >= 1 && adhyayID <= 18) {
+    const res = await fetch(`http://localhost:3000/api/adhyay/${params.adhyayID}`)
+    const adhyay = await res.json()
+    return { props: { adhyay } }
+  } else {
+    return { notFound: true }
+  }
+}

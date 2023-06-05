@@ -1,6 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/about/[adhyay]": "pages/about/[adhyay].js"
+  "/_error": "pages/_error.js",
+  "/about/[adhyay]/[adhyayID]": "pages/about/[adhyay]/[adhyayID].js",
+  "/api/adhyay/[adhyayID]": "pages/api/adhyay/[adhyayID].js"
 }
