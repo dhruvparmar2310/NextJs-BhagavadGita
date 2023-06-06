@@ -17,19 +17,21 @@ function AdhyayID ({ adhyay }) {
     const router = useRouter()
     const {adhyayID} = router.query
 
-  // const fetchAdhyay = () => {
-  //   const response = axios.get(`/api/adhyay/${adhyayID}`)
-  //   .then(data => {
-  //     console.log('data >> ', data?.data)
-  //     setData(data?.data)
-  //   })
-  // } 
+  const fetchAdhyay = () => {
+    const response = axios.get(`/api/adhyay/${adhyayID}`)
+    .then(data => {
+      console.log('data >> ', data?.data)
+      setData(data?.data)
+    })
+    return response
+  } 
 
-  // useEffect(() => {
-  //   fetchAdhyay()
-  //   console.log('adhyayID :>> ', adhyayID);
-  // }, [])
-  console.log('adhyay :>> ', adhyay);
+  useEffect(() => {
+    fetchAdhyay()
+    console.log('adhyayID :>> ', adhyayID);
+  }, [])
+  console.log('data :>> ', data)
+  // console.log('adhyay :>> ', adhyay);
   return (
     <>
         <Head>
@@ -58,16 +60,20 @@ function AdhyayID ({ adhyay }) {
 
                 <div className={`row ${styles.content}`}>
                     <div className="col-lg-4 text-center" data-aos="fade-right">
-                        <Image src={adhyay?.image} 
-                            className="img-fluid"
-                            width={500}
-                            height={500}
-                            quality={100}
-                            alt={adhyay?.title}
+                        <Image 
+                          // src={adhyay?.image}
+                          src={data?.image}
+                          className="img-fluid"
+                          width={500}
+                          height={500}
+                          quality={100}
+                          // alt={adhyay?.title}
+                          alt={data?.title}
                         />
                     </div>
                     <div className={`col-lg-8 ${ysabeau.className}`} data-aos="fade-left">
-                      <p>{adhyay?.description}</p>
+                      {/* <p>{adhyay?.description}</p> */}
+                      <p>{data?.description}</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +82,7 @@ function AdhyayID ({ adhyay }) {
         <section id="about-us" className={`${styles.faq}`}>
           <div className="container" data-aos="fade-up">
 
-              {adhyay?.content.map((content, index) => {
+              {data?.content?.map((content, index) => {
                 return (
                   <React.Fragment key={index}>
                     <div className={`${styles.content} mb-3`}>
@@ -120,38 +126,38 @@ function AdhyayID ({ adhyay }) {
 
 export default AdhyayID
 
-export const getStaticPaths = async () => {
-  const paths = []
+// export const getStaticPaths = async () => {
+//   const paths = []
 
-  for (let i = 1; i <= 18; i++) {
-    paths.push({
-      params: {
-        // adhyay: 'adhyay',
-        adhyayID: i.toString(),
-      },
-    })
-  }
-  return {
-    // paths: [
-    //   {
-    //     params: {
-    //       adhyay: 'some-value',
-    //       adhyayID: '1',
-    //     },
-    //   }, // See the "paths" section below
-    // ],
-    paths: paths,
-    fallback: true, // false or "blocking"
-  }
-}
+//   for (let i = 1; i <= 18; i++) {
+//     paths.push({
+//       params: {
+//         // adhyay: 'adhyay',
+//         adhyayID: i.toString(),
+//       },
+//     })
+//   }
+//   return {
+//     // paths: [
+//     //   {
+//     //     params: {
+//     //       adhyay: 'some-value',
+//     //       adhyayID: '1',
+//     //     },
+//     //   }, // See the "paths" section below
+//     // ],
+//     paths: paths,
+//     fallback: true, // false or "blocking"
+//   }
+// }
  
-export const getStaticProps = async ({ params }) => {
-  const adhyayID = parseInt(params.adhyayID)
-  if (adhyayID >= 1 && adhyayID <= 18) {
-    const res = await fetch(`http://localhost:3000/api/adhyay/${adhyayID}`)
-    const adhyay = await res.json()
-    return { props: { adhyay } }
-  } else {
-    return { notFound: true }
-  }
-}
+// export const getStaticProps = async ({ params }) => {
+//   const adhyayID = parseInt(params.adhyayID)
+//   if (adhyayID >= 1 && adhyayID <= 18) {
+//     const res = await fetch(`http://localhost:3000/api/adhyay/${adhyayID}`)
+//     const adhyay = await res.json()
+//     return { props: { adhyay } }
+//   } else {
+//     return { notFound: true }
+//   }
+// }
