@@ -140,7 +140,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const adhyayID = parseInt(params.adhyayID)
   if (adhyayID >= 1 && adhyayID <= 18) {
-    const res = await fetch(`/api/adhyay/${params.adhyayID}`)
+    const res = await fetch(`http://localhost:3000/api/adhyay/${adhyayID}`)
     const adhyay = await res.json()
     return { props: { adhyay } }
   } else {
