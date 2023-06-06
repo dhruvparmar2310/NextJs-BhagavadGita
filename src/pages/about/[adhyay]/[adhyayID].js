@@ -85,7 +85,7 @@ function AdhyayID ({ adhyay }) {
           <div className="container" data-aos="fade-up">
 
             <div className={``}>
-              {data?.content?.map((item) => {
+              {/* {data?.content?.map((item) => {
                 return (
                   <React.Fragment key={item?.shlokID}>
                     <Accordion defaultActiveKey={data?.content[0]} flush>
@@ -100,7 +100,7 @@ function AdhyayID ({ adhyay }) {
                     </Accordion>
                   </React.Fragment>
                 )
-              })}
+              })} */}
             </div>
           
           </div>
@@ -118,7 +118,7 @@ export const getStaticPaths = async () => {
   for (let i = 1; i <= 18; i++) {
     paths.push({
       params: {
-        adhyay: 'some-value',
+        adhyay: 'adhyay',
         adhyayID: i.toString(),
       },
     })

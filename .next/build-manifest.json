@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/yfsS_5Vao1KjErSmGeLd6/_buildManifest.js",
-    "static/yfsS_5Vao1KjErSmGeLd6/_ssgManifest.js"
+    "static/vxhUD1qoDObiayTUhK-sx/_buildManifest.js",
+    "static/vxhUD1qoDObiayTUhK-sx/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -48,18 +48,16 @@
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-2ba37e62325cc71b.js",
-      "static/chunks/442-08667caedf5076de.js",
       "static/css/28d99845e45d8686.css",
-      "static/chunks/pages/about/[adhyay]/[adhyayID]-f9c22f2c477910b5.js"
+      "static/chunks/pages/about/[adhyay]/[adhyayID]-9c3559c4323178b2.js"
     ],
     "/about/iskcon": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-2ba37e62325cc71b.js",
-      "static/chunks/442-08667caedf5076de.js",
-      "static/chunks/784-b1e9c6dcc555bce6.js",
+      "static/chunks/807-779974e2fd2cbb94.js",
       "static/css/ef46122f1c9e067f.css",
-      "static/chunks/pages/about/iskcon-1531bd7f62b24ca2.js"
+      "static/chunks/pages/about/iskcon-1ce86aaf8d858ea7.js"
     ],
     "/about/lord-krishna": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -80,9 +78,9 @@
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-2ba37e62325cc71b.js",
       "static/css/78c308f947926339.css",
-      "static/chunks/807-3643e5cc04ea454f.js",
+      "static/chunks/146-f3d551226bc86590.js",
       "static/css/8dfd49ded64ed86c.css",
-      "static/chunks/pages/bhajan-f8ec30cb54f265d6.js"
+      "static/chunks/pages/bhajan-6b74aae6e4f9e441.js"
     ],
     "/contact": [
       "static/chunks/webpack-59c5c889f52620d6.js",

@@ -208,32 +208,7 @@ function AdhyayID({ adhyay  }) {
                     className: "container",
                     "data-aos": "fade-up",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: ``,
-                        children: data?.content?.map((item)=>{
-                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react__WEBPACK_IMPORTED_MODULE_5___default().Fragment), {
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.Accordion, {
-                                    defaultActiveKey: data?.content[0],
-                                    flush: true,
-                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.Accordion.Item, {
-                                        eventKey: item?.shlokID,
-                                        children: [
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.Accordion.Header, {
-                                                children: item?.shlok
-                                            }),
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__.Accordion.Body, {
-                                                style: {
-                                                    border: "1px solid black !important"
-                                                },
-                                                className: (_styles_Adhyay_module_css__WEBPACK_IMPORTED_MODULE_9___default().accordion_body),
-                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                    children: item?.translation?.hi?.data
-                                                })
-                                            })
-                                        ]
-                                    })
-                                })
-                            }, item?.shlokID);
-                        })
+                        className: ``
                     })
                 })
             })
@@ -246,7 +221,7 @@ const getStaticPaths = async ()=>{
     for(let i = 1; i <= 18; i++){
         paths.push({
             params: {
-                adhyay: "some-value",
+                adhyay: "adhyay",
                 adhyayID: i.toString()
             }
         });
