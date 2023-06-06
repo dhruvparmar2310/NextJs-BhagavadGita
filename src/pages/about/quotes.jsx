@@ -3,7 +3,6 @@ import styles from '../../styles/About.module.css'
 import { Ysabeau } from 'next/font/google'
 import Link from 'next/link'
 import Head from 'next/head'
-import WallpaperCard from '@/components/WallpaperCard'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600'], style: ['normal', 'italic'] })
 

@@ -49,9 +49,7 @@ function Header () {
                                     <li>
                                         <Link href={'/about/wallpapers'} className={ysabeau.className}>Wallpapers</Link>
                                     </li>
-                                    <li>
-                                        <Link href={'/about/quotes'} className={ysabeau.className}>Quotes</Link>
-                                    </li>
+                                    <li><Link href={'/about/quotes'} className={ysabeau.className}>Quotes</Link></li>
                                 </ul>
                             </li>
                             <li><Link href={'/about/adhyay'} className={ysabeau.className}>Adhyay</Link></li>
