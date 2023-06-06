@@ -69,7 +69,7 @@ function Adhyay({ router, adhyay}) {
                         </tr>
                     </thead>
                     <tbody>
-                        {adhyay?.map((items, index) => {
+                        {adhyay && adhyay?.map((items, index) => {
                             return (
                                 <React.Fragment key={index}>
                                     <tr>
