@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../styles/About.module.css'
 import { Ysabeau } from 'next/font/google'
 import Link from 'next/link'
