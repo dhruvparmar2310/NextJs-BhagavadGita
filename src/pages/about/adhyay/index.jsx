@@ -5,12 +5,31 @@ import main from '../../../../public/Bhagavad-Gita.jpg'
 import { Ysabeau } from 'next/font/google'
 import styles from '../../../styles/Adhyay.module.css'
 import axios from 'axios'
-import { withRouter } from 'next/router'
+import { useRouter, withRouter } from 'next/router'
 import Head from 'next/head'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
-function Adhyay({ router, adhyay}) {
+function Adhyay({ adhyay}) {
+    const [data, setData] = useState([])
+    const [id, setId] = useState('')
+    const router = useRouter()
+    const {adhyayID} = router.query
+
+  const fetchAdhyay = () => {
+    const response = axios.get('/api/adhyay')
+    .then(data => {
+      console.log('data >> ', data?.data)
+      setData(data?.data)
+    })
+    return response
+  } 
+
+  useEffect(() => {
+    fetchAdhyay()
+    console.log('adhyayID :>> ', adhyayID);
+  }, [])
+  console.log('data :>> ', data)
 
   return (
     <>
@@ -69,7 +88,7 @@ function Adhyay({ router, adhyay}) {
                         </tr>
                     </thead>
                     <tbody>
-                        {adhyay && adhyay?.map((items, index) => {
+                        {data && data?.map((items, index) => {
                             return (
                                 <React.Fragment key={index}>
                                     <tr>
@@ -92,8 +111,8 @@ function Adhyay({ router, adhyay}) {
 
 export default withRouter(Adhyay)
 
-export const getServerSideProps = async () => {
-    const res = await fetch('http://localhost:3000/api/adhyay')
-    const adhyay = await res.json()
-    return { props: { adhyay } }
-}
+// export const getServerSideProps = async () => {
+//     const res = await fetch('http://localhost:3000/api/adhyay')
+//     const adhyay = await res.json()
+//     return { props: { adhyay } }
+// }

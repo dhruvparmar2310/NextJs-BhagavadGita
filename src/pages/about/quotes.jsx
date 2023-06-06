@@ -3,11 +3,28 @@ import styles from '../../styles/About.module.css'
 import { Ysabeau } from 'next/font/google'
 import Link from 'next/link'
 import Head from 'next/head'
+import axios from 'axios'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600'], style: ['normal', 'italic'] })
 
 function Quotes ({ quotes }) {
-    console.log('quotes :>> ', quotes);
+    const [data, setData] = useState([])
+    const [id, setId] = useState('')
+
+  const fetchQoutes = () => {
+    const response = axios.get('/api/quotes')
+    .then(data => {
+      console.log('data >> ', data?.data)
+      setData(data?.data)
+    })
+    return response
+  } 
+
+  useEffect(() => {
+    fetchQoutes()
+  }, [])
+  console.log('data :>> ', data)
+    // console.log('quotes :>> ', quotes);
   return (
     <>
         <Head>
@@ -39,8 +56,8 @@ function Quotes ({ quotes }) {
               <p></p>
             </div>
 
-            {quotes ? <>
-                {quotes?.map((quote, index) => {
+            {data ? <>
+                {data?.map((quote, index) => {
                     return (
                         <React.Fragment key={index}>
                             <div className={`row ${styles.content} mb-3`}>
@@ -73,8 +90,8 @@ function Quotes ({ quotes }) {
 
 export default Quotes
 
-export const getServerSideProps = async () => {
-    const res = await fetch('http://localhost:3000/api/quotes')
-    const quotes = await res.json()
-    return { props: { quotes } }
-}
+// export const getServerSideProps = async () => {
+//     const res = await fetch('http://localhost:3000/api/quotes')
+//     const quotes = await res.json()
+//     return { props: { quotes } }
+// }
