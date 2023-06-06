@@ -1,1 +1,15 @@
-self.__NEXT_FONT_MANIFEST={pages:{"/_app":["static/media/9535a88fe8861650.p.woff2","static/media/776235dcfdac5fac.p.woff2"],"/about":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/about/iskcon":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/about/wallpapers":["static/media/9535a88fe8861650.p.woff2","static/media/776235dcfdac5fac.p.woff2"],"/about/lord-krishna":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/bhajan":["static/media/9535a88fe8861650.p.woff2","static/media/776235dcfdac5fac.p.woff2"],"/contact":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/about/[adhyay]":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"],"/about/[adhyay]/[adhyayID]":["static/media/776235dcfdac5fac.p.woff2","static/media/9535a88fe8861650.p.woff2"]},app:{},appUsingSizeAdjust:!1,pagesUsingSizeAdjust:!1};
+self.__NEXT_FONT_MANIFEST={
+  "pages": {
+    "/_app": [
+      "static/media/776235dcfdac5fac.p.woff2",
+      "static/media/9535a88fe8861650.p.woff2"
+    ],
+    "/about/[adhyay]/[adhyayID]": [
+      "static/media/776235dcfdac5fac.p.woff2",
+      "static/media/9535a88fe8861650.p.woff2"
+    ]
+  },
+  "app": {},
+  "appUsingSizeAdjust": false,
+  "pagesUsingSizeAdjust": false
+}

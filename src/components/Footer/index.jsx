@@ -29,30 +29,30 @@ function Footer () {
                         <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Useful Links</h4>
                             <ul className={ysabeau.className}>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Useful Links</h4>
                             <ul className={ysabeau.className}>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
                             <h4 className={ysabeau.className}>Reading</h4>
                             <ul>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about">Book</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay">Adhyay</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 1</Link></li>
-                                <li><i class="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 2</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about">Book</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay">Adhyay</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 1</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 2</Link></li>
                             </ul>
                         </div>
 
@@ -71,7 +71,7 @@ function Footer () {
                     </div>
                 </div>
                 <div className={`col-lg-6 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
-                    <Link href="https://github.com/dhruvparmar2310" target="_blank" className={styles.facebook}><i class="ri-github-fill"></i></Link>
+                    <Link href="https://github.com/dhruvparmar2310" target="_blank" className={styles.facebook}><i className="ri-github-fill"></i></Link>
                     <Link href="https://www.facebook.com/dhruv.parmar.73550794" target="_blank" className={styles.facebook}><i className="ri-facebook-fill"></i></Link>
                     <Link href="https://www.instagram.com/dhan.parmar23/" target="_blank" className={styles.instagram}><i className="ri-instagram-line"></i></Link>
                 </div>

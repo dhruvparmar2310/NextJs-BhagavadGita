@@ -163,7 +163,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -175,7 +175,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -187,7 +187,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -199,7 +199,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -225,7 +225,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -237,7 +237,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -249,7 +249,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -261,7 +261,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -286,7 +286,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -298,7 +298,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -310,7 +310,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -322,7 +322,7 @@ function Footer() {
                                                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("li", {
                                                     children: [
                                                         /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                                            class: "ri-arrow-right-s-line"
+                                                            className: "ri-arrow-right-s-line"
                                                         }),
                                                         " ",
                                                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
@@ -405,7 +405,7 @@ function Footer() {
                                     target: "_blank",
                                     className: (Footer_module_default()).facebook,
                                     children: /*#__PURE__*/ jsx_runtime.jsx("i", {
-                                        class: "ri-github-fill"
+                                        className: "ri-github-fill"
                                     })
                                 }),
                                 /*#__PURE__*/ jsx_runtime.jsx((link_default()), {

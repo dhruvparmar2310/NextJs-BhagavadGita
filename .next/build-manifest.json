@@ -1,93 +1,34 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/vxhUD1qoDObiayTUhK-sx/_buildManifest.js",
-    "static/vxhUD1qoDObiayTUhK-sx/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/10d88813ab5c0426.css",
-      "static/chunks/pages/index-3bd192fda8553a7f.js"
-    ],
     "/_app": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/2af598108632b674.css",
-      "static/chunks/pages/_app-ae055528d1a6ed46.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/chunks/pages/_error-54de1933a164a1ff.js"
-    ],
-    "/about": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/5182e3a694130ff2.css",
-      "static/chunks/pages/about-d77caa422107c4ff.js"
-    ],
-    "/about/[adhyay]": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/28d99845e45d8686.css",
-      "static/chunks/pages/about/[adhyay]-4a4da751d3e5988f.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/about/[adhyay]/[adhyayID]": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/28d99845e45d8686.css",
-      "static/chunks/pages/about/[adhyay]/[adhyayID]-9c3559c4323178b2.js"
-    ],
-    "/about/iskcon": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/chunks/807-779974e2fd2cbb94.js",
-      "static/css/ef46122f1c9e067f.css",
-      "static/chunks/pages/about/iskcon-1ce86aaf8d858ea7.js"
-    ],
-    "/about/lord-krishna": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/ef46122f1c9e067f.css",
-      "static/chunks/pages/about/lord-krishna-359e00a75b784e75.js"
-    ],
-    "/about/wallpapers": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/5182e3a694130ff2.css",
-      "static/chunks/pages/about/wallpapers-96671b989ba35959.js"
-    ],
-    "/bhajan": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/78c308f947926339.css",
-      "static/chunks/146-f3d551226bc86590.js",
-      "static/css/8dfd49ded64ed86c.css",
-      "static/chunks/pages/bhajan-6b74aae6e4f9e441.js"
-    ],
-    "/contact": [
-      "static/chunks/webpack-59c5c889f52620d6.js",
-      "static/chunks/framework-2c79e2a64abdb08b.js",
-      "static/chunks/main-2ba37e62325cc71b.js",
-      "static/css/ac48facabf72d1d9.css",
-      "static/chunks/pages/contact-9ffe906d8416b8c7.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/about/[adhyay]/[adhyayID].js"
     ]
   },
   "ampFirstPages": []
