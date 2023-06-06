@@ -118,7 +118,7 @@ export const getStaticPaths = async () => {
   for (let i = 1; i <= 18; i++) {
     paths.push({
       params: {
-        adhyay: 'adhyay',
+        // adhyay: 'adhyay',
         adhyayID: i.toString(),
       },
     })
