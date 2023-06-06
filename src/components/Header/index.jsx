@@ -50,21 +50,11 @@ function Header () {
                                         <Link href={'/about/wallpapers'} className={ysabeau.className}>Wallpapers</Link>
                                     </li>
                                     <li>
-                                        <Link href={''} className={ysabeau.className}>Quotes</Link>
-                                    </li>
-                                    <li className={`${styles.drop_down}`}>
-                                        <Link href={'/about/adhyay'}>Adhyay <i className="ri-arrow-right-s-line"></i></Link>
-                                        <ul>
-                                            <li>
-                                                <Link href="/about/adhyay/1">Adhyay 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link href="chapter-2.html">Adhyay 2</Link>
-                                            </li>
-                                        </ul>
+                                        <Link href={'/about/quotes'} className={ysabeau.className}>Quotes</Link>
                                     </li>
                                 </ul>
                             </li>
+                            <li><Link href={'/about/adhyay'} className={ysabeau.className}>Adhyay</Link></li>
                             <li>
                                 <Link href={'/bhajan'} className={ysabeau.className}>Bhajan</Link>
                             </li>

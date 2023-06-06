@@ -129,6 +129,7 @@
     font-weight: 500;
     text-transform: none;
     color: #111;
+    letter-spacing: 0.3mm;
   }
   
   .nav_menu .drop_down ul a:hover, .nav_menu .drop_down ul .active > a, .nav_menu .drop_down ul li:hover > a {

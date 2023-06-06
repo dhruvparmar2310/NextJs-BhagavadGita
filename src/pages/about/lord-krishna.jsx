@@ -23,9 +23,9 @@ function LordKrishna() {
                 <div className="d-flex justify-content-between align-items-center">
                     <h2 className={ysabeau.className}>Lord Krishna</h2>
                     <ol>
-                        <li><Link href='/'>Home</Link></li>
-                        <li><Link href='/about'>About</Link></li>
-                        <li>Lord Krishna</li>
+                        <li><Link className={ysabeau.className} href='/'>Home</Link></li>
+                        <li><Link className={ysabeau.className} href='/about'>About</Link></li>
+                        <li className={ysabeau.className}>Lord Krishna</li>
                     </ol>
                 </div>
             </div>

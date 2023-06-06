@@ -25,10 +25,10 @@ function Adhyay({ router, adhyay}) {
         <section id="breadcrumbs" className="breadcrumbs">
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center">
-                    <h2>Adhyay</h2>
+                    <h2 className={ysabeau.className}>Adhyay</h2>
                     <ol>
-                        <li><Link href='/'>Home</Link></li>
-                        <li>Adhyay</li>
+                        <li><Link className={ysabeau.className} href='/'>Home</Link></li>
+                        <li className={ysabeau.className}>Adhyay</li>
                     </ol>
                 </div>
             </div>
@@ -73,10 +73,10 @@ function Adhyay({ router, adhyay}) {
                             return (
                                 <React.Fragment key={index}>
                                     <tr>
-                                        <td>{items?.id}</td>
-                                        <td>{items?.title}</td>
+                                        <td className={ysabeau.className}>{items?.id}</td>
+                                        <td className={ysabeau.className}>{items?.title}</td>
                                         <td>
-                                            <button className={`btn btn-sm btn-outline-dark`} onClick={() => router.push(`/about/adhyay/${index + 1}`)}>Read</button>
+                                            <button className={`btn btn-sm btn-outline-dark ${ysabeau.className}`} onClick={() => router.push(`/about/adhyay/${index + 1}`)}>Read</button>
                                         </td>
                                     </tr>
                                 </React.Fragment>

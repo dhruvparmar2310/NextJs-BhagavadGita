@@ -43,11 +43,11 @@ function AdhyayID ({ adhyay }) {
         <section id="breadcrumbs" className="breadcrumbs">
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center">
-                    <h2>Adhyay - {adhyayID}</h2>
+                    <h2 className={ysabeau.className}>{adhyay?.title}</h2>
                     <ol>
-                        <li><Link href='/'>Home</Link></li>
-                        <li><Link href='/about/adhyay'>Adhyay</Link></li>
-                        <li>Adhyay - {adhyayID}</li>
+                        <li><Link  className={ysabeau.className} href='/'>Home</Link></li>
+                        <li><Link  className={ysabeau.className} href='/about/adhyay'>Adhyay</Link></li>
+                        <li className={ysabeau.className}>Adhyay - {adhyayID}</li>
                     </ol>
                 </div>
             </div>
@@ -58,24 +58,16 @@ function AdhyayID ({ adhyay }) {
 
                 <div className={`row ${styles.content}`}>
                     <div className="col-lg-4 text-center" data-aos="fade-right">
-                        <Image src={main.src} 
+                        <Image src={adhyay?.image} 
                             className="img-fluid"
                             width={500}
                             height={500}
                             quality={100}
-                            alt='bhagavad gita'
+                            alt={adhyay?.title}
                         />
                     </div>
                     <div className={`col-lg-8 ${ysabeau.className}`} data-aos="fade-left">
-                      <p>
-                        The Bhagavad Gita, or the song of God, was revealed by Lord Shree Krishna to Arjun on the threshold of the epic war of Mahabharata. A decisive battle between two sets of cousins, the Kauravas and the Pandavas, was just about to commence on the battlefield of Kurukshetra. A detailed account of the reasons that led to such a colossal war; is given under Introduction-The Setting of the Bhagavad Gita.
-                      </p>
-                      <p className="font-italic">
-                        The Bhagavad Gita is primarily a conversation between Lord Shree Krishna and Arjun. However, the first chapter begins with a dialogue between King Dhritarashtra and his minister Sanjay. Dhritarashtra being blind, could not leave his palace in Hastinapur but was eager to know the ongoings of the battlefield.
-                      </p>
-                      <p className="font-italic">
-                        Sanjay was a disciple of Sage Ved Vyas, the author of the epic Mahabharata and several other Hindu scriptures. Sage Ved Vyas possessed a mystic ability to see and hear events occurring in distant places. He had bestowed upon Sanjay the miraculous power of distant vision. Therefore, Sanjay could see and hear, what transpired on the battleground of Kurukshetra, and gave a first-hand account to King Dhritarashtra while still being in his palace.
-                      </p>
+                      <p>{adhyay?.description}</p>
                     </div>
                 </div>
             </div>
@@ -84,24 +76,40 @@ function AdhyayID ({ adhyay }) {
         <section id="about-us" className={`${styles.faq}`}>
           <div className="container" data-aos="fade-up">
 
-            <div className={``}>
-              {/* {data?.content?.map((item) => {
+              {adhyay?.content.map((content, index) => {
                 return (
-                  <React.Fragment key={item?.shlokID}>
-                    <Accordion defaultActiveKey={data?.content[0]} flush>
-                      <Accordion.Item eventKey={item?.shlokID}>
-                        <Accordion.Header>
-                          {item?.shlok}
-                        </Accordion.Header>
-                        <Accordion.Body style={{ border: '1px solid black !important' }} className={styles.accordion_body}>
-                          <span>{item?.translation?.hi?.data}</span>
-                        </Accordion.Body>
-                      </Accordion.Item>
-                    </Accordion>
+                  <React.Fragment key={index}>
+                    <div className={`${styles.content} mb-3`}>
+                      <div className={`accordion accordion-flush`} id={content?.shlokID}>
+                        <div className={`accordion-item`}>
+                          <h2 className={`accordion-header ${ysabeau.className}`} id={`flush-heading-${content?.shlokID}`}>
+                          <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${content?.shlokID}`} aria-expanded="false" aria-controls={`flush-collapse-${content?.shlokID}`}>
+                              {content?.shlok}
+                          </button>
+                          </h2>
+                          <div id={`flush-collapse-${content?.shlokID}`} className={`accordion-collapse collapse `} aria-labelledby={`flush-heading-${content?.shlokID}`} data-bs-parent={`#${content?.shlokID}`}>
+                            <div className={`accordion-body ${styles.accordionBody} ${ysabeau.className}`}>
+                              <h4 className={ysabeau.className}>Translation in Hindi:</h4><hr style={{ position: 'relative', top: '-10px', marginBottom: '3px' }} />
+                              <p style={{ fontSize: '16px', fontWeight: '400' }}>
+                                <i className="ri-double-quotes-l" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
+                                  {content?.translation?.hi?.data}
+                                <i className="ri-double-quotes-r" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
+                              </p>
+
+                              <h4 className={`${ysabeau.className} mt-4`}>Translation in English:</h4><hr style={{ position: 'relative', top: '-10px', marginBottom: '3px' }} />
+                              <p className={ysabeau.className}>
+                                <i className="ri-double-quotes-l" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
+                                  {content?.translation?.en?.data}
+                                <i className="ri-double-quotes-r" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </React.Fragment>
                 )
-              })} */}
-            </div>
+              })}
           
           </div>
 

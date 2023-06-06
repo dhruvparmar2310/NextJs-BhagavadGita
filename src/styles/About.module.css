@@ -12,6 +12,38 @@
   letter-spacing: 0.15mm;
 }
 
+.about_us .content .accordionBtn {
+  border-radius: 10px !important;
+  padding: 20px;
+  background-color: var(--hover);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about_us .content .accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: none !important;
+}
+
+.about_us .content .accordionBody {
+  margin-top: 5px;
+  text-align: justify;
+  border: 1px solid var(--hover);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.about_us .content .accordionBody p {
+  font-size: 15px;
+  font-style: italic;
+  text-align: end;
+  font-weight: 600;
+  color: var(--theme);
+  letter-spacing: 0.5px;
+}
+
 .about_us .content p i {
   font-size: 12px;
   position: relative;

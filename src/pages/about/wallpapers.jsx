@@ -23,9 +23,9 @@ function Wallpapers() {
                 <div className="d-flex justify-content-between align-items-center">
                     <h2 className={ysabeau.className}>Wallpapers</h2>
                     <ol>
-                        <li><Link href='/'>Home</Link></li>
-                        <li><Link href='/about'>About</Link></li>
-                        <li>Wallpapers</li>
+                        <li><Link className={ysabeau.className} href='/'>Home</Link></li>
+                        <li><Link className={ysabeau.className} href='/about'>About</Link></li>
+                        <li className={ysabeau.className}>Wallpapers</li>
                     </ol>
                 </div>
             </div>

@@ -180,3 +180,43 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.faq .content .accordionBtn {
+  border-radius: 10px !important;
+  padding: 20px;
+  background-color: var(--hover);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.faq .content .accordion-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: none !important;
+}
+
+.faq .content .accordionBody {
+  margin-top: 5px;
+  text-align: justify;
+  border: 1px solid var(--hover);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.faq .content .accordionBody h4 {
+  font-size: 24px;
+  color: var(--theme)
+}
+
+.faq .content .accordionBody p {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.faq .content p i {
+  font-size: 12px;
+  position: relative;
+  top: -10px;
+}
+
