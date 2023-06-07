@@ -8,23 +8,23 @@ import axios from 'axios'
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600'], style: ['normal', 'italic'] })
 
 function Quotes ({ quotes }) {
-    const [data, setData] = useState([])
-    const [id, setId] = useState('')
+//     const [data, setData] = useState([])
+//     const [id, setId] = useState('')
 
-  const fetchQoutes = () => {
-    const response = axios.get('/api/quotes')
-    .then(data => {
-      console.log('data >> ', data?.data)
-      setData(data?.data)
-    })
-    return response
-  } 
+//   const fetchQoutes = () => {
+//     const response = axios.get('/api/quotes')
+//     .then(data => {
+//       console.log('data >> ', data?.data)
+//       setData(data?.data)
+//     })
+//     return response
+//   } 
 
-  useEffect(() => {
-    fetchQoutes()
-  }, [])
-  console.log('data :>> ', data)
-    // console.log('quotes :>> ', quotes);
+//   useEffect(() => {
+//     fetchQoutes()
+//   }, [])
+//   console.log('data :>> ', data)
+    console.log('quotes :>> ', quotes);
   return (
     <>
         <Head>
@@ -56,8 +56,8 @@ function Quotes ({ quotes }) {
               <p></p>
             </div>
 
-            {data ? <>
-                {data?.map((quote, index) => {
+            {quotes ? <>
+                {quotes?.map((quote, index) => {
                     return (
                         <React.Fragment key={index}>
                             <div className={`row ${styles.content} mb-3`}>
@@ -80,8 +80,15 @@ function Quotes ({ quotes }) {
                         </React.Fragment>
                     )
                 })}
-            </> : <p>Loading...</p>}
-
+            </> : <div class="d-flex justify-content-center" style={{ width: '100%', padding: '50px', flexDirection: 'column' }}>
+                    <div className='text-center'>
+                        <div className="spinner-grow" role="status" style={{ color: 'var(--theme)', }}>
+                        </div>
+                    </div>
+                    <span className={`sr-only ${ysabeau.className} mt-2`} style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>
+                        Loading <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span> <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span> <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span>
+                    </span>
+                </div>}
           </div>
         </section>
     </>
@@ -90,8 +97,8 @@ function Quotes ({ quotes }) {
 
 export default Quotes
 
-// export const getServerSideProps = async () => {
-//     const res = await fetch('http://localhost:3000/api/quotes')
-//     const quotes = await res.json()
-//     return { props: { quotes } }
-// }
+export const getServerSideProps = async () => {
+    const res = await fetch(`${process.env.DEPLOY}/api/quotes`)
+    const quotes = await res.json()
+    return { props: { quotes } }
+}
