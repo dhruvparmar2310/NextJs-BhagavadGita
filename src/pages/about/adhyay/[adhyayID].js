@@ -8,6 +8,7 @@ import { Ysabeau } from 'next/font/google'
 import main from '../../../../public/assets/adhyay/ch-1.jpg'
 import { Accordion, Card } from 'react-bootstrap'
 import Head from 'next/head'
+import Pagination from '@/components/Pagination'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500'], style: ['normal', 'italic'] })
 
@@ -16,6 +17,19 @@ function AdhyayID ({ adhyay }) {
     // const [id, setId] = useState('')
     const router = useRouter()
     const {adhyayID} = router.query
+    const [currentPage, setCurrentPage] = useState(1)
+    const pageSize = 10
+
+    const paginate = (items, pageNumber, pageSize) => {
+      const startIndex = (pageNumber - 1) * pageSize
+      return items?.content?.slice(startIndex, startIndex + pageSize);
+    }
+    const paginatedAdhyay = paginate(adhyay, currentPage, pageSize)
+    console.log('paginatedAdhyay :>> ', paginatedAdhyay);
+
+    const onPageChange = (page) => {
+      setCurrentPage(page);
+    }
 
   // const fetchAdhyay = () => {
   //   const response = axios.get(`/api/adhyay/${adhyayID}`)
@@ -32,6 +46,8 @@ function AdhyayID ({ adhyay }) {
   // }, [])
   // console.log('data :>> ', data)
   console.log('adhyay :>> ', adhyay);
+
+  
   return (
     <>
         <Head>
@@ -82,16 +98,16 @@ function AdhyayID ({ adhyay }) {
         <section id="about-us" className={`${styles.faq}`}>
           <div className="container" data-aos="fade-up">
 
-              {adhyay?.content?.map((content, index) => {
+              {paginatedAdhyay ? paginatedAdhyay.map((content, index) => {
                 return (
                   <React.Fragment key={index}>
                     <div className={`${styles.content} mb-3`}>
                       <div className={`accordion accordion-flush`} id={content?.shlokID}>
                         <div className={`accordion-item`}>
                           <h2 className={`accordion-header ${ysabeau.className}`} id={`flush-heading-${content?.shlokID}`}>
-                          <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${content?.shlokID}`} aria-expanded="false" aria-controls={`flush-collapse-${content?.shlokID}`}>
-                              {content?.shlok}
-                          </button>
+                            <button className={`accordion-button collapsed ${styles.accordionBtn}`} type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${content?.shlokID}`} aria-expanded="false" aria-controls={`flush-collapse-${content?.shlokID}`} style={{ whiteSpace: 'pre-line' }}>
+                                {content?.shlok}
+                            </button>
                           </h2>
                           <div id={`flush-collapse-${content?.shlokID}`} className={`accordion-collapse collapse `} aria-labelledby={`flush-heading-${content?.shlokID}`} data-bs-parent={`#${content?.shlokID}`}>
                             <div className={`accordion-body ${styles.accordionBody} ${ysabeau.className}`}>
@@ -103,7 +119,7 @@ function AdhyayID ({ adhyay }) {
                               </p>
 
                               <h4 className={`${ysabeau.className} mt-4`}>Translation in English:</h4><hr style={{ position: 'relative', top: '-10px', marginBottom: '3px' }} />
-                              <p className={ysabeau.className}>
+                              <p className={ysabeau.className} style={{ whiteSpace: 'pre-line' }}>
                                 <i className="ri-double-quotes-l" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
                                   {content?.translation?.en?.data}
                                 <i className="ri-double-quotes-r" style={{ position: 'relative', top: '-10px', fontSize: '12px', color: 'var(--theme)' }}></i>
@@ -115,8 +131,23 @@ function AdhyayID ({ adhyay }) {
                     </div>
                   </React.Fragment>
                 )
-              })}
-          
+              }) : <>
+                <div class="d-flex justify-content-center" style={{ width: '100%', padding: '50px', flexDirection: 'column' }}>
+                    <div className='text-center'>
+                        <div className="spinner-grow" role="status" style={{ color: 'var(--theme)', }}>
+                        </div>
+                    </div>
+                    <span className={`sr-only ${ysabeau.className} mt-2`} style={{ textAlign: 'center', fontWeight: '600', fontSize: '20px' }}>
+                        Loading <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span> <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span> <span  className="spinner-grow spinner-grow-sm" role="status" style={{ color: 'var(--theme)', height: '5px', width: '5px'}}></span>
+                    </span>
+                </div>
+              </>}
+            <Pagination
+              items={adhyay?.content?.length} // 100
+              currentPage={currentPage} // 1
+              pageSize={pageSize} // 10
+              onPageChange={onPageChange}
+            />
           </div>
 
         </section>
@@ -154,7 +185,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const adhyayID = parseInt(params.adhyayID)
   if (adhyayID >= 1 && adhyayID <= 18) {
-    const res = await fetch(`${process.env.DEPLOY}/api/adhyay/${adhyayID}`)
+    const res = await fetch(`${process.env.LOCALHOST}/api/adhyay/${adhyayID}`)
     const adhyay = await res.json()
     return { props: { adhyay } }
   } else {

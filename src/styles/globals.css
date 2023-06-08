@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 :root {
   --theme: #cca04a;
   --hover: #cca14ac6;
+  --pagination: rgb(0, 174, 255);
 }
 
 
