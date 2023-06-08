@@ -3,7 +3,7 @@ import styles from '../../styles/Header.module.css'
 import Link from 'next/link'
 import tilak from '../../../public/images__10_-removebg.png'
 import Image from 'next/image'
-import { Ysabeau, Lobster } from 'next/font/google'
+import { Ysabeau } from 'next/font/google'
 
 const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600'], style: ['normal', 'italic'] })
 
