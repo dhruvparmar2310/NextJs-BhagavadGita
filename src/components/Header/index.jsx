@@ -9,7 +9,7 @@ const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500
 
 function Header () {
     const [isNavExpanded, setIsNavExpanded] = useState(false)
-    console.log('isNavExpanded :>> ', isNavExpanded);
+
     return (
         <>
             <header id={styles.header} className={`fixed-top shadow bg-white ${styles.header}`}>

@@ -11,9 +11,8 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, []);
+  }, [])
 
-  console.log('router.route :>> ', router.route);
   return (
     <>
       <Header />
