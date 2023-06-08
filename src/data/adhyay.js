@@ -241,7 +241,7 @@ export const adhyay = [
                         data: 'उस समय, पांडु के पुत्र अर्जुन ने, जिनके रथ की ध्वजा पर हनुमान का चिन्ह था, धनुष उठा लिया। अपने पुत्रों को अपने विरुद्ध संगठित देखकर अर्जुन ने श्रीकृष्ण से निम्न वचन कहे।'
                     }, 
                     en: {
-                        data: 'At that time, the son of Pandu, Arjun, who had the insignia of Hanuman on the flag of his chariot, took up his bow.\nSeeing your sons arrayed against him, O King, Arjun then spoke the following words to Shree Krishna.'
+                        data: 'At that time, the son of Pandu, Arjun, who had the insignia of Hanuman on the flag of his chariot, took up his bow. Seeing your sons arrayed against him, O King, Arjun then spoke the following words to Shree Krishna.'
                     }
                 }
             }, 
