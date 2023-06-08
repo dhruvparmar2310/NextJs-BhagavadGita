@@ -91,7 +91,7 @@ function Adhyay ({ adhyay, router }) {
 export default withRouter(Adhyay)
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.DEPLOY}/api/adhyay`)
+  const res = await fetch(`${process.env.LOCALHOST}/api/adhyay` || `${process.env.DEPLOY}/api/adhyay`)
   const adhyay = await res.json()
   return { props: { adhyay } }
 }
