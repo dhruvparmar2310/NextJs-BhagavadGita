@@ -10,6 +10,11 @@ a {
   color: #1bbd36;
 }
 
+a:hover {
+  color: #2ae149;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
@@ -27,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   /* overflow: hidden; */
+}
+
+.section_bg {
+  background-color: #f7f7f7;
 }
 
 .section_title {
@@ -58,3 +67,86 @@ section {
   margin-bottom: 0;
 }
 
+@media (max-width: 576px) {
+  section {
+    padding: 50px 0;
+    /* overflow: hidden; */
+  }
+  
+  .section_title h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  .section_title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 85px;
+    height: 3px;
+    bottom: 15px;
+    left: calc(50% - 40px);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 15px 0;
+  background: var(--theme);
+  min-height: 40px;
+  margin-top: 72px;
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+.breadcrumbs ol a {
+  color: #040404;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.breadcrumbs ol a:hover {
+  color: white;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #fff;
+  content: "/";
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs {
+    margin-top: 58px;
+  }
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+}
