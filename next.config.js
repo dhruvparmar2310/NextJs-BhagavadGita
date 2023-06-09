@@ -6,7 +6,9 @@ const nextConfig = {
   },
   env: {
     LOCALHOST: 'http://localhost:3000',
-    DEPLOY: 'https://bhagavad-gita-zeta.vercel.app/'
+    DEPLOY: 'https://bhagavad-gita-zeta.vercel.app/',
+    MUSIC: 'music',
+    VIDEO: 'video'
   },
 }
 

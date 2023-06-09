@@ -55,8 +55,8 @@ function Bhajan() {
               <h2 style={{ color: 'white', textShadow: '-3px 5px 10px #1e1e1e', letterSpacing: '1px' }}>Bhajan Page</h2>
             </div>
 
-            <div className={`${styles.content} row`} style={{ height: '5%', marginBottom: '10px' }}>
-              <div className={`col`}>
+            <div className={`${styles.content} row`} style={{ height: '5%', margin: '10px auto' }}>
+              <div className={`col col-sm-12`}>
                 <ul className="nav justify-content-center">
                   <li className="nav-item">
                     <Link className="nav-link" href="#" id='music' onClick={(e) => setID(e.target.id)}>Music</Link>
@@ -68,8 +68,8 @@ function Bhajan() {
               </div>
             </div>
 
-            <div className={`${styles.content} row`}>
-              <div className={`col ${styles.musicList}`}>
+            <div className={`${styles.content}`}  style={{ height: 'auto', margin: '10px auto' }}>
+              <div className={`${styles.musicList}`}>
                 {
                   id === 'video' ?  
                   <VideoList videoList={videoList} setVideoDetails={setVideoDetails} />
@@ -77,7 +77,7 @@ function Bhajan() {
                 }  
               </div>
 
-              <div className={`col ${styles.player}`}>
+              <div className={`${styles.player}`}>
                 {
                   id === 'video' ? 
                   <div className={styles.videoPlayer}>

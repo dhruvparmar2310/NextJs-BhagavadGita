@@ -73,7 +73,7 @@ function Quotes ({ quotes }) {
 export default Quotes
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.LOCALHOST}/api/quotes` || `${process.env.DEPLOY}/api/quotes`)
+  const res = await fetch(`${process.env.DEPLOY}/api/quotes`)
   const quotes = await res.json()
   return { props: { quotes } }
 }

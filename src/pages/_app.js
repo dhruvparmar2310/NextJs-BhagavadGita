@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Header />
         <Component {...pageProps} />
-      {router?.route === '/bhajan' ? <footer style={{ display: 'none'}}></footer> : <Footer />}
+      {router?.route === '/bhajan' || router?.route === '/404' ? <footer style={{ display: 'none'}}></footer> : <Footer />}
     </>
   )
 }

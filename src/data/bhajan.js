@@ -9,9 +9,9 @@
         {
             id: '2',
             title: 'Hare Krishna Hare Rama - Jubin Nautiyal',
-            artist: '',
-            src: '',
-            music: ''
+            artist: 'Jubin Nautiyal',
+            src: '/assets/music/Hare-Krishna-Hare-Rama-Jubin-Nautiyal.jpeg',
+            music: '/assets/music/Hare_Krishna_Hare_Rama_Jubin_Nauti_.mp3'
         },
         {
             id: '3',
@@ -45,6 +45,18 @@
         },
         {
             id: '2',
+            title: 'Shri Krishna Govind Hare Murari | Krishna Bhajan',
+            singer: 'Simpal Kharel',
+            src: '/assets/video/SHRI-KRISHNA-GOVIND-HARE-MURARI-Cover-Song-by-SIMPAL-KHAREL-Krishna-Bhajan-2022-BHAKTI-SONG.mp4'
+        },
+        {
+            id: '3',
+            title: 'Radha Rani Lage | Krishna Bhajan',
+            singer: 'Simpal Kharel',
+            src: '/assets/video/RADHA-RANI-LAGE-SIMPAL-KHAREL-NEW-SONG-RADHA-KRISHNA-BHAJAN.mp4'
+        },
+        {
+            id: '4',
             title: 'Hare Rama Hare Krishna - RVJ',
             singer: '',
             src: '/assets/video/hare-rama-hare-krishna-rvj.mp4'

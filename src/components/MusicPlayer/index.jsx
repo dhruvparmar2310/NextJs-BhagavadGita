@@ -11,6 +11,7 @@ function MusicPlayer ({ musicList, musicDetails }) {
 
   const handlePlay = () => {
     const audioElement = audioRef.current
+    console.log('audioRef.current.duration :>> ', audioRef.current.duration);
 
     if (isPlaying) {
       audioElement.pause()
@@ -24,108 +25,117 @@ function MusicPlayer ({ musicList, musicDetails }) {
   return (
     <>
       {
-        musicDetails.length === 0 ? 
-        <>
-          <div className={`${styles.card}`}>
-            <Image
-              src={musicList[0]?.src}
-              className="card-img-top"
-              width={100}
-              height={300}
-              alt="..." 
-            />
+        musicDetails.length === 0 ?
+          <>
+            <div className={`${styles.card}`}>
+              <div className={styles.card_img_top}>
+                <Image
+                  src={musicList[0]?.src}
+                  className=""
+                  width={200}
+                  height={200}
+                  alt="..."
+                />
+              </div>
 
-            <div className='row'>
-              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
-                <audio ref={audioRef} src={musicDetails?.music} />
-                <span><i className="ri-skip-back-fill" style={{ fontSize: '25px' }}></i></span>
+              <div className={`${styles.card_body} mt-0 pt-0`}>
+                <p className={`${ysabeau.className} m-0`}>{musicList[0]?.title}</p>
+                <p className={`${ysabeau.className} m-0`}><span className={`${styles.artist}`}>{musicList[0]?.artist}</span></p>
               </div>
-              <div className={`col-lg-4 ${styles.music_control} text-center`}>
-                <audio ref={audioRef} src={musicList[0]?.music} />
-                <span onClick={handlePlay}>{isPlaying ? <i class="ri-pause-circle-line"></i> : <i class="ri-play-circle-line"></i>}</span>
+
+              <div className={styles.musicDuration}>
+                {/* <input type='range' className='form-range' /> */}
+                <div className={styles.range} id="range">
+                  <div className={styles.slider} id="slider">
+                  </div>
+                </div>
+                <div className={styles.duration}>
+                  <p>0:00</p>
+                  <p>10:05</p>
+                </div>
               </div>
-              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                <audio ref={audioRef} src={musicDetails?.music} />
-                <span><i className="ri-skip-forward-fill" style={{ fontSize: '25px' }}></i></span>
+
+              <div className={styles.musicController}>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-repeat-line" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-skip-back-fill" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} ${styles.playPause} text-center`}>
+                  <audio ref={audioRef} src={musicList[0]?.music} />
+                  <span onClick={handlePlay}>{isPlaying ? <i className="ri-pause-circle-fill"></i> : <i className="ri-play-circle-fill"></i>}</span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-skip-forward-fill" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-menu-line" style={{ fontSize: '20px' }}></i></span>
+                </div>
               </div>
+              
             </div>
-            <div className={`${styles.card_body} pt-0`}>
-              <table className='table table-responsive table-borderless'>
-                <tbody>
-                  <tr>
-                    <td>
-                      <p className={`${ysabeau.className} m-0`}>Title</p>
-                    </td>
-                    <td>:</td>
-                    <td>
-                      <p className='m-0'>{musicList[0]?.title}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p className={`${ysabeau.className} m-0`}>Artist</p>
-                    </td>
-                    <td>:</td>
-                    <td>
-                      <p className='m-0'>{musicList[0]?.artist}</p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </>
-        :
-        <>
-          <div className={`${styles.card}`}>
-            <Image
-                src={musicDetails?.src} 
-                className="card-img-top" 
-                width={100}
-                height={300}
-                alt="..."
-            />
-            <div className='row'>
-              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
-                <audio ref={audioRef} src={musicDetails?.music} />
-                <span><i className="ri-skip-back-fill" style={{ fontSize: '25px' }}></i></span>
+          </>
+          :
+          <>
+            <div className={`${styles.card}`}>
+              <div className={styles.card_img_top}>
+                <Image
+                  src={musicDetails?.src}
+                  className=""
+                  width={200}
+                  height={200}
+                  alt="..."
+                />
               </div>
-              <div className={`col-lg-4 ${styles.music_control} text-center`}>
-                <audio ref={audioRef} src={musicDetails?.music} />
-                <span onClick={() => handlePlay()}>{isPlaying ? <i className="ri-pause-circle-line"></i> : <i className="ri-play-circle-line"></i>}</span>
+
+              <div className={`${styles.card_body} mt-0 pt-0`}>
+                <p className={`${ysabeau.className} m-0`}>{musicDetails?.title}</p>
+                <p className={`${ysabeau.className} m-0`}><span className={`${styles.artist}`}>{musicDetails?.artist}</span></p>
               </div>
-              <div className={`col-lg-4 ${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-                <audio ref={audioRef} src={musicDetails?.music} />
-                <span><i className="ri-skip-forward-fill" style={{ fontSize: '25px' }}></i></span>
+
+              <div className={styles.musicDuration}>
+                {/* <input type='range' className='form-range' /> */}
+                <div className={styles.range} id="range">
+                  <div className={styles.slider} id="slider">
+                  </div>
+                </div>
+                <div className={styles.duration}>
+                  <p>0:00</p>
+                  <p>10:05</p>
+                </div>
               </div>
+
+              <div className={styles.musicController}>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-repeat-line" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'end', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-skip-back-fill" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} ${styles.playPause} text-center`}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span onClick={handlePlay}>{isPlaying ? <i className="ri-pause-circle-fill"></i> : <i className="ri-play-circle-fill"></i>}</span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-skip-forward-fill" style={{ fontSize: '20px' }}></i></span>
+                </div>
+                <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+                  <audio ref={audioRef} src={musicDetails?.music} />
+                  <span><i className="ri-menu-line" style={{ fontSize: '20px' }}></i></span>
+                </div>
+              </div>
+          
             </div>
-            <div className={`${styles.card_body} pt-0`}>
-              <table className='table table-responsive table-borderless'>
-                <tbody>
-                  <tr>
-                    <td>
-                      <p className={`${ysabeau.className} m-0`}>Title</p>  
-                    </td>
-                    <td>:</td>
-                    <td>
-                      <p className='m-0'>{musicDetails?.title}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p className={`${ysabeau.className} m-0`}>Artist</p>  
-                    </td>
-                    <td>:</td>
-                    <td>
-                      <p className='m-0'>{musicDetails?.artist}</p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </> 
-      }  
+          </>
+      }
     </>
   )
 }
