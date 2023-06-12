@@ -30,29 +30,27 @@ function Footer () {
                             <h4 className={ysabeau.className}>Useful Links</h4>
                             <ul className={ysabeau.className}>
                                 <li><i className="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about">About us</Link></li>
                                 <li><i className="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
                                 <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
-                            <h4 className={ysabeau.className}>Useful Links</h4>
+                            <h4 className={ysabeau.className}>About Us</h4>
                             <ul className={ysabeau.className}>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/">Home</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/ #about-us">About us</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/bhajan">Bhajan</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/contact">Contact</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about">Bhagavad Gita Book</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/lord-krishna">Lord Krishna</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/iskcon">ISKCON</Link></li>
                             </ul>
                         </div>
 
                         <div className={`col-lg-3 col-md-6 col-sm-4 ${styles.footer_links}`}>
-                            <h4 className={ysabeau.className}>Reading</h4>
+                            <h4 className={ysabeau.className}>Additional Features</h4>
                             <ul>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about">Book</Link></li>
                                 <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay">Adhyay</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 1</Link></li>
-                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/adhyay/1">Adhyay 2</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/wallpapers">Wallpapers</Link></li>
+                                <li><i className="ri-arrow-right-s-line"></i> <Link href="/about/quotes">Quotes</Link></li>
                             </ul>
                         </div>
 
