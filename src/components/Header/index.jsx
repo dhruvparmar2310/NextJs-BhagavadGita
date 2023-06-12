@@ -16,7 +16,7 @@ function Header () {
                 <div className={`container d-flex align-items-center ${styles.home}`}>
                     <div className={
                         isNavExpanded ? `${styles.top_header}` : ``}>
-                        <h1 className={`${styles.logo} mr-auto`}>
+                        <h1 className={`${styles.logo} mr-auto`} title={`Bhagavad Gita As It Is - Dhruv Parmar`}>
                             <Link href='/' className={ysabeau.className} style={{ fontWeight: '500' }}><span>Bhagavad</span><Image src={tilak.src} width={50} height={100} alt='main logo' />Gita</Link>
                         </h1>
                         <button className={styles.menu}
@@ -32,10 +32,10 @@ function Header () {
                     >
                         <ul>
                             <li className="active">
-                                <Link href='/' className={ysabeau.className}>Home</Link>
+                                <Link href='/' className={ysabeau.className} title='Home | Bhagavad Gita'>Home</Link>
                             </li>
                             <li className={`${styles.drop_down}`}>
-                                <Link href={`#about-us`} className={ysabeau.className}>About <i className="ri-arrow-down-s-line"></i></Link>
+                                <Link href={`#about-us`} className={ysabeau.className} title='About Us | Bhagavad Gita'>About <i className="ri-arrow-down-s-line"></i></Link>
                                 <ul>
                                     <li>
                                         <Link href={'/about'} className={ysabeau.className}>Book</Link>
@@ -52,11 +52,11 @@ function Header () {
                                     <li><Link href={'/about/quotes'} className={ysabeau.className}>Quotes</Link></li>
                                 </ul>
                             </li>
-                            <li><Link href={'/about/adhyay'} className={ysabeau.className}>Adhyay</Link></li>
+                            <li><Link href={'/about/adhyay'} className={ysabeau.className} title='Adhyay | Bhagavad Gita'>Adhyay</Link></li>
                             <li>
-                                <Link href={'/bhajan'} className={ysabeau.className}>Bhajan</Link>
+                                <Link href={'/bhajan'} className={ysabeau.className} title='Bhajan | Bhagavad Gita'>Bhajan</Link>
                             </li>
-                            <li><Link href={'/contact'} className={ysabeau.className}>Contact</Link></li>
+                            <li><Link href={'/contact'} className={ysabeau.className} title='Contact | Bhagavad Gita'>Contact</Link></li>
                         </ul>
                     </nav>
                 </div>

@@ -34,7 +34,7 @@ function LordKrishna () {
       <section id="about-us" className={`${styles.about_us}`} style={{ height: 'auto', }}>
         <div className="container" data-aos="fade-up">
 
-          <div className={`section_title`}>
+          <div className={`section_title`} title='Lord Krishna | About | Bhagavad Gita'>
             <h2>Lord Krishna</h2>
           </div>
 
@@ -72,6 +72,7 @@ function LordKrishna () {
                   height={500}
                   quality={100}
                   alt='Lord Krishna'
+                  title='Shri Shri Dwarkadhish Temple | Dwarka | Gujarat'
                 />
               </div>
               <p>

@@ -35,13 +35,14 @@ function Iskcon() {
         <section id="about-us" className={`${styles.about_us}`} style={{ height: 'auto' }}>
           <div className="container" data-aos="fade-up">
 
-            <div className={`section_title`}>
+            <div className={`section_title`} title='Iskcon | About | Bhagavad Gita'>
               <h2>Iskcon</h2>
               <Image 
                 src={'/assets/iskcon/logo.png'} 
                 width={100} 
                 height={100} 
                 alt='Iskcon Logo'
+                title='International Society for Krishna Consciousness | ISKCON'
               />
             </div>
 
@@ -122,7 +123,7 @@ function Iskcon() {
                 <p>
                     God is known across the world by many names including <span>Allah</span>, <span>Jehovah</span>, <span>Yahweh</span>, <span>Rama</span>, <span>Jesus Christ</span>, etc. ISKCON devotees chant God’s names in the form of the maha-mantra, or the great prayer for deliverance:
                 </p>
-                <p className='text-center'>
+                <p className='text-center' title={`Hare Krishna Mahamantra Jaap`}>
                     <span style={{ color: 'red' }}>
                         Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare |<br/>
                         Hare Rama Hare Rama, Rama Rama, Hare Hare ||
@@ -137,32 +138,11 @@ function Iskcon() {
                 <p>
                     Members of ISKCON practice <span>bhakti-yoga</span> in their homes and also worship in temples. They also promote bhakti-yoga, or <span>Krishna Consciousness</span>, through <span>festivals</span>, the <span>performing arts</span>, <span>yoga seminars</span>, <span>public chanting</span>, and the <span>distribution of the society’s literatures</span>. ISKCON members have also opened hospitals, schools, colleges, eco-villages, free food distribution projects, and other institutions as a practical application of the path of devotional yoga.
                 </p>
-                <div className="accordion accordion-flush" id="accordionFlushExample">
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingOne">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            What is ISKCON?
-                        </button>
-                        </h2>
-                        <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div className="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the firsaccordion body.
-                            </div>
-                        </div>
-                    </div>
-                    <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingTwo">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                        </button>
-                        </h2>
-                        <div id="flush-collapseTwo" className="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div className="accordion-body">
-                                Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second  accordion body.imagine this being filled with some actual content.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    We also provide an Online Book reading platform for the <span>Book Lovers</span>, where you can explore our books such as <span>Shrimad Bhagavatam</span>, <span>The Science of Self Realization</span>, <span>Teachings of Lord Caitaniya</span>, <span>Beyond Birth & Death</span>, and many more.
+                    <br/><br/> 
+                    You can explore more on: <Link href={`https://vedabase.io/en/library/`} style={{ textDecoration: 'none', color: 'red' }} data-bs-toggle="tooltip" data-bs-placement="top" title="Bhaktivedanta Vedabase | ISKCON">Bhaktivedanta Vedabase</Link>
+                </p>
             </div>
           </div>
         </section>

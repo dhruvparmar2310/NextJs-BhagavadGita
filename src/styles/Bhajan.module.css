@@ -81,6 +81,12 @@
 
 }
 
+  .bhajan .content ul li a {
+    color: var(--pagination);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
   .bhajan .content p {
     font-size: 20px;
     word-spacing: 3px;
@@ -121,7 +127,7 @@
 
   .musicList table tbody {
     max-height: 200px;
-    overflow-y: scroll !important;
+    overflow: auto !important;
     display: block;
     width: 100%;
   }

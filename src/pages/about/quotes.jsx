@@ -34,7 +34,7 @@ function Quotes ({ quotes }) {
       <section id="services" className={`${styles.about_us} ${styles.section_bg}`}>
         <div className="container" data-aos="fade-up">
 
-          <div className={`section_title`}>
+          <div className={`section_title`} title='Quotes | About | Bhagavad Gita'>
             <h2>Quotes</h2>
             <p></p>
           </div>
@@ -73,7 +73,7 @@ function Quotes ({ quotes }) {
 export default Quotes
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.DEPLOY}/api/quotes`)
+  const res = await fetch(`${process.env.LOCALHOST}/api/quotes`)
   const quotes = await res.json()
   return { props: { quotes } }
 }

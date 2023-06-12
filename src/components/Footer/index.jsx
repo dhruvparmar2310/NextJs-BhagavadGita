@@ -16,13 +16,13 @@ function Footer () {
                     <div className="row">
 
                         <div className={`col-lg-3 col-md-6 col-sm-12 ${styles.footer_contact}`} style={{ width: '20rem' }}>
-                            <h3>
+                            <h3 title='Bhagavad Gita As It Is - Dhruv Parmar'>
                                 <Link href="/" className={ysabeau.className}>Bhagavad <span>Gita</span></Link>
                             </h3>
                             <h4 className={ysabeau.className} style={{ padding: '0', margin: '0' }}>Get in touch :</h4>
                             <p className={ysabeau.className} style={{ fontSize: '16px' }}>The Song of God<br/><br/>
                                 <strong>Phone:<Link href="tel:9586627577"> +91 9586-627-577</Link></strong><br/>
-                                <strong>Email:<Link href="mailto:dhanparmar23@gmail.com"> dhanparmar23@gmail.com</Link></strong><br/>
+                                <strong>Email:<Link href="mailto:dhanparmar23@gmail.com" title='dhanparmar23@gmail.com'> dhanparmar23@gmail.com</Link></strong><br/>
                             </p>
                         </div>
 
@@ -65,13 +65,13 @@ function Footer () {
                         Copyright &copy; <span style={{ fontSize: '18px' }}>2023</span>, <strong style={{ color: 'var(--theme)' }}>Bhagavad <span style={{ color: '#ddd' }}>Gita</span></strong>. All Rights Reserved
                     </div>
                     <div className={styles.credits}>
-                        Designed by <Link href="https://dhruvparmar2310.github.io/dhruvparmar/" target="_blank">Dhruv Parmar</Link>
+                        Designed by <Link href="https://dhruvparmar2310.github.io/dhruvparmar/" target="_blank" title='Dhruv Parmar | Bhagavad Gita'>Dhruv Parmar</Link>
                     </div>
                 </div>
                 <div className={`col-lg-6 p-0 ${styles.social_links}`} style={{ textAlign: 'end' }}>
-                    <Link href="https://github.com/dhruvparmar2310" target="_blank" className={styles.facebook}><i className="ri-github-fill"></i></Link>
-                    <Link href="https://www.facebook.com/dhruv.parmar.73550794" target="_blank" className={styles.facebook}><i className="ri-facebook-fill"></i></Link>
-                    <Link href="https://www.instagram.com/dhan.parmar23/" target="_blank" className={styles.instagram}><i className="ri-instagram-line"></i></Link>
+                    <Link href="https://github.com/dhruvparmar2310" target="_blank" className={styles.github} title='Dhruv Parmar | Github | Bhagavad Gita'><i className="ri-github-fill"></i></Link>
+                    <Link href="https://www.facebook.com/dhruv.parmar.73550794" target="_blank" className={styles.facebook} title='Dhruv Parmar | Facebook | Bhagavad Gita'><i className="ri-facebook-fill"></i></Link>
+                    <Link href="https://www.instagram.com/dhan.parmar23/" target="_blank" className={styles.instagram} title='Dhruv Parmar | Instagram | Bhagavad Gita'><i className="ri-instagram-line"></i></Link>
                 </div>
             </div>
         </footer> 

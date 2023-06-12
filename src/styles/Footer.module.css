@@ -140,12 +140,25 @@
     transition: 0.3s;
     text-decoration: none;
   }
-  
-  .footer .social_links a:hover {
+
+  .footer .social_links .github:hover {
+    background: #666666;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .footer .social_links .facebook:hover {
     background: #0055ff;
     color: #fff;
     text-decoration: none;
   }
+
+  .footer .social_links .instagram:hover {
+    background-color: #d7660f;
+    color: #fff;
+    text-decoration: none;
+  }
+
 
   @media (max-width: 576px) {
     .footer .footer_top {

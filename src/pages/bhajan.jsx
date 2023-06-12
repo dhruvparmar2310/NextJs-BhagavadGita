@@ -7,6 +7,9 @@ import VideoPlayer from '@/components/VideoPlayer'
 import MusicList from '@/components/MusicList'
 import VideoList from '@/components/VideoList'
 import MusicPlayer from '@/components/MusicPlayer'
+import { Ysabeau } from 'next/font/google'
+
+const ysabeau = Ysabeau({ subsets: ['latin'], weight: ['200', '300', '400', '500', '600', '700'], style: ['normal', 'italic'] })
 
 function Bhajan() {
   const [id, setID] = useState()
@@ -59,10 +62,10 @@ function Bhajan() {
               <div className={`col col-sm-12`}>
                 <ul className="nav justify-content-center">
                   <li className="nav-item">
-                    <Link className="nav-link" href="#" id='music' onClick={(e) => setID(e.target.id)}>Music</Link>
+                    <Link className={`nav-link ${ysabeau.className}`} href="#" id='music' onClick={(e) => setID(e.target.id)}>Music</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="#" id='video' onClick={(e) => setID(e.target.id)}>Video</Link>
+                    <Link className={`nav-link ${ysabeau.className}`} href="#" id='video' onClick={(e) => setID(e.target.id)}>Video</Link>
                   </li>
                 </ul>
               </div>

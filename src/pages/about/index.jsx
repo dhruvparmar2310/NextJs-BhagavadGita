@@ -19,14 +19,14 @@ function About() {
       <section id="about-us" className={`${styles.about_us}`} style={{ height: 'auto', marginTop: '60px' }}>
           <div className="container" data-aos="fade-up">
 
-            <div className={`section_title`}>
+            <div className={`section_title`} title='About Us | Bhagavad Gita'>
               <h2>About Us</h2>
             </div>
 
             <div className={`container ${styles.content}`} style={{ textAlign: 'justify', fontSize: '25px', wordSpacing: '3px' }}>
               <div className={`row ${styles.description} ${ysabeau.className}`} id="description" data-aos="fade-left" style={{ marginTop: '0', fontStyle: 'italic' }}>
 
-                <p className={`${ysabeau.className} ${styles.slokh}`}>
+                <p className={`${ysabeau.className} ${styles.slokh}`} title='कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। मा कर्मफलहेतुर्भूर्मा ते संगोऽस्त्वकर्मणि। - Bhagavad Gita [Ch.: 2.47]'>
                   कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। <br/>मा कर्मफलहेतुर्भूर्मा ते संगोऽस्त्वकर्मणि।
                 </p>
                 <p className='mt-3'>

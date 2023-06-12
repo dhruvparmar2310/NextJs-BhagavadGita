@@ -34,8 +34,8 @@ function Wallpapers () {
       <section id="services" className={`${styles.about_us} ${styles.section_bg}`}>
         <div className="container" data-aos="fade-up">
 
-          <div className={`section_title`}>
-            <h2>Wallpaper</h2>
+          <div className={`section_title`} title='Wallpapers | About | Bhagavad Gita'>
+            <h2>Wallpapers</h2>
             <p></p>
           </div>
 
