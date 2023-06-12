@@ -69,7 +69,7 @@ function Bhajan() {
             </div>
 
             <div className={`${styles.content}`}  style={{ height: 'auto', margin: '10px auto' }}>
-              <div className={`${styles.musicList}`}>
+              <div className={`${styles.musicList} table-wrapper-scroll-y`}>
                 {
                   id === 'video' ?  
                   <VideoList videoList={videoList} setVideoDetails={setVideoDetails} />
