@@ -319,16 +319,17 @@
 
     .nav_menu.expanded {
       background-color: #fff;
-      height: 25vh;
+      height: 35vh;
+      position: relative;
     }
 
     .nav_menu.expanded ul {
       display: flex;
       position: absolute;
       top: 60px;
-      left: 140px;
+      left: 0px;
       flex-direction: column;
-      width: 100%;
+      width: 100vw;
       /* height: 10vh; */
       margin: 0;
       padding: 0;
@@ -336,6 +337,8 @@
     }
 
     .nav_menu.expanded li {
+      width: 100%;
+      text-align: center;
       padding: 5px;
     }
   
