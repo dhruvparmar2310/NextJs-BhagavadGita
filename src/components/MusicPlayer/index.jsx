@@ -65,7 +65,7 @@ function MusicPlayer ({ musicList, musicDetails }) {
                   <span><i className="ri-skip-back-fill" style={{ fontSize: '20px' }}></i></span>
                 </div>
                 <div className={`${styles.music_control} ${styles.playPause} text-center`}>
-                  <audio ref={audioRef} src={musicList[0]?.music} />
+                  <audio ref={audioRef} src={musicList[0]?.music} type='audio/mpeg' />
                   <span onClick={handlePlay}>{isPlaying ? <i className="ri-pause-circle-fill"></i> : <i className="ri-play-circle-fill"></i>}</span>
                 </div>
                 <div className={`${styles.music_control} text-center`} style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
